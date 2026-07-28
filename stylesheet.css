@@ -23,7 +23,7 @@ body {
 
 h1{font:300 italic 2rem 'Fraunces', serif;}
 
-#gallery-grid {display:grid;grid-template: 1fr 1fr / 1fr .5fr .5fr 2fr 1fr; gap:0 20px;align-items: center;}
+#gallery-grid {display:grid;grid-template: 1fr 1fr / 1fr .5fr .5fr 2fr 1fr; gap:0 20px;align-items: center; margin-top: 1.5%;}
 .gallery-card {position:relative!important; width:100%; display:grid;grid-template-columns:subgrid;grid-column:1/-1;}
 .fcgalleries {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
 .fcavatarsgalleries{grid-column:1/2;}

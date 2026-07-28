@@ -125,9 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let selectedEthnicity = "*";
-
     let minAge = 18;
     let maxAge = 100;
+    let searchText = "";
 
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
@@ -145,8 +145,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 selectedEthnicity === "*" ||
                 itemElem.matches(selectedEthnicity);
 
-            return matchesAge && matchesEthnicity;
+            const name = normalize(
+                itemElem.querySelector(".fcname").textContent
+            );
+
+            const matchesSearch =
+                name.includes(normalize(searchText));
+
+            return (
+                matchesAge &&
+                matchesEthnicity &&
+                matchesSearch
+            );
+
         }
+
     });
 
     const ageSlider = document.querySelector("#age-slider");
@@ -172,6 +185,25 @@ document.addEventListener("DOMContentLoaded", () => {
         iso.arrange();
 
     });
+
+    const searchInput = document.querySelector("#search");
+
+    searchInput.addEventListener("input", () => {
+
+        searchText = searchInput.value
+            .trim()
+            .toLowerCase();
+
+        iso.arrange();
+
+    });
+
+    function normalize(text) {
+        return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+    }
 
     document.querySelectorAll("#filters button")
         .forEach(button => {
