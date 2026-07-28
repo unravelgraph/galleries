@@ -9,6 +9,26 @@ function debug(...args) {
     }
 }
 
+function calculateAge(dob) {
+
+    const birthDate = new Date(dob);
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (
+        monthDiff < 0 ||
+        (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+        age--;
+    }
+
+    return age;
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.querySelector("#gallery-grid");
@@ -61,6 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const card = document.createElement("div");
 
+        const age = calculateAge(person.dob);
+        card.dataset.age = age;
+
         const ethnicityClasses = (person.ethnicity || [])
             .map(e => e.replace(/\s+/g, "-"))
             .join(" ");
@@ -77,10 +100,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    let selectedEthnicity = "*";
+
+    let minAge = 18;
+    let maxAge = 100;
+
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
-        layoutMode: "vertical"
+        layoutMode: "vertical",
+        filter: function(itemElem) {
+
+            const matchesEthnicity =
+                selectedEthnicity === "*" ||
+                itemElem.classList.contains(
+                    selectedEthnicity.replace(".", "")
+                );
+
+
+            const age = Number(itemElem.dataset.age);
+
+
+            const matchesAge =
+                age >= minAge &&
+                age <= maxAge;
+
+
+            return matchesEthnicity && matchesAge;
+
+        }
     });
+
+    const minSlider = document.querySelector("#min-age");
+    const maxSlider = document.querySelector("#max-age");
+    const ageValue = document.querySelector("#age-value");
+
+
+    function updateAgeFilter() {
+
+        minAge = Number(minSlider.value);
+        maxAge = Number(maxSlider.value);
+
+
+        // Prevent min going above max
+        if (minAge > maxAge) {
+            minAge = maxAge;
+            minSlider.value = minAge;
+        }
+
+
+        ageValue.textContent = `${minAge} - ${maxAge}`;
+
+
+        iso.arrange();
+
+    }
+
+
+    minSlider.addEventListener(
+        "input",
+        updateAgeFilter
+    );
+
+
+    maxSlider.addEventListener(
+        "input",
+        updateAgeFilter
+    );
+
+
+    updateAgeFilter();
 
     document.querySelectorAll("#filters button")
         .forEach(button => {
@@ -89,9 +177,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const filterValue = button.dataset.filter;
 
-                iso.arrange({
-                    filter: filterValue
-                });
+                selectedEthnicity = filterValue;
+
+                iso.arrange();
 
             });
 
