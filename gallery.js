@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    const navbar = document.querySelector("nav");
+    const navbar = document.querySelector(".navbar");
     navbar.innerHTML = `
         <a href="index.html">Galleries</a>
         <a href="#">${person.name} - ${folderName} (${files.length})</a>

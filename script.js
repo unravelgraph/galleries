@@ -31,7 +31,7 @@ function calculateAge(dob) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const navbar = document.querySelector("nav");
+    const navbar = document.querySelector(".navbar");
     navbar.innerHTML = `<a href="index.html">galleries</a>`;
 
     const container = document.querySelector("#gallery-grid");
