@@ -93,6 +93,17 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
             <div class="fcname">${person.name}</div>
             <div class="dob">${person.dob}</div>
+            ${
+            Object.entries(person.folders)
+            .map(([folder, files]) => `
+
+                <div class="fc${folder}">
+                    ${files.length} ${folder}
+                </div>
+
+            `)
+            .join("")
+        }
             <div class="lastupdate">${person.lastAdded}</div>
         `;
 
