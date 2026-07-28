@@ -2,20 +2,66 @@ const USER="uravelgraph";
 const REPO="galleries";
 const ROOT="assets";
 
+const DEBUG = true;
+function debug(...args) {
+    if (DEBUG) {
+        console.log("[Gallery Debug]", ...args);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.querySelector("#gallery-grid");
 
-    console.log("Container:", container);
-    console.log("People:", PEOPLE);
+    debug("Container:", container);
+
+
+    // Generate filters
+    const filterContainer = document.querySelector("#filters");
+    const ethnicities = new Set();
 
     PEOPLE.forEach(person => {
 
-        console.log("Adding:", person.name);
+        (person.ethnicities || [])
+            .forEach(e => ethnicities.add(e));
+
+    });
+
+
+    // Add "All" button first
+    filterContainer.innerHTML = `
+        <button data-filter="*">
+            All
+        </button>
+    `;
+
+
+    ethnicities.forEach(ethnicity => {
+
+        const button = document.createElement("button");
+
+        button.dataset.filter = "." + ethnicity.replace(/\s+/g, "-");
+
+        button.textContent = ethnicity;
+
+        filterContainer.appendChild(button);
+
+    });
+
+
+    // Add Cards
+    debug("People:", PEOPLE);
+    PEOPLE.forEach(person => {
+
+        debug("Adding:", person.name);
 
         const card = document.createElement("div");
 
-        card.className = "gallery-card";
+        const ethnicities = (person.ethnicities || [])
+            .map(e => e.replace(/\s+/g, "-"))
+            .join(" ");
+
+        card.className = `gallery-card ${ethnicities}`;
 
         card.innerHTML = `
             <h2>${person.name}</h2>
@@ -23,12 +69,32 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${person.lastAdded}</p>
         `;
 
-        console.log("Card created:", card);
+        debug("Card created:", card);
 
         container.appendChild(card);
 
-        console.log("Container now:", container.innerHTML);
+        debug("Container now:", container.innerHTML);
 
     });
+
+    const iso = new Isotope(container, {
+        itemSelector: ".gallery-card",
+        layoutMode: "fitRows"
+    });
+
+    document.querySelectorAll("#filters button")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const filterValue = button.dataset.filter;
+
+                iso.arrange({
+                    filter: filterValue
+                });
+
+            });
+
+        });
 
 });
