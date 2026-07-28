@@ -34,13 +34,13 @@ folders.forEach(folder => {
 
 
     // Scan image folders
+    let latestDate = null;
+
     fs.readdirSync(personPath).forEach(subfolder => {
 
         const subfolderPath = path.join(personPath, subfolder);
 
         if (!fs.statSync(subfolderPath).isDirectory()) return;
-
-        let latestDate = null;
 
         const files = fs.readdirSync(subfolderPath)
             .filter(file =>
@@ -49,10 +49,8 @@ folders.forEach(folder => {
             .map(file => {
 
                 const filePath = path.join(subfolderPath, file);
-
                 const stats = fs.statSync(filePath);
 
-                // Check if this file is newer
                 if (!latestDate || stats.mtime > latestDate) {
                     latestDate = stats.mtime;
                 }
@@ -61,16 +59,17 @@ folders.forEach(folder => {
 
             });
 
-
         person.folders[subfolder] = files;
 
     });
 
+
     if (latestDate) {
         person.lastAdded = latestDate
-        .toISOString()
-        .split("T")[0];
+            .toISOString()
+            .split("T")[0];
     }
+
 
     people.push(person);
 
