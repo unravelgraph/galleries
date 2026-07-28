@@ -93,8 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
             <div class="fcname">${person.name}</div>
 
+            <div class="fcname">${person.ethnicity}</div>
+
             <div class="dob">
-                ${person.dob} (${age} years old)
+                ${person.dob} <i>(${age} yo)</i>
             </div>
 
             <div class="fcgalleries">
