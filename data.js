@@ -14,7 +14,8 @@ const PEOPLE = [
         "dob": "1996",
         "ethnicity": [
             "Chinese"
-        ]
+        ],
+        "lastAdded": "2026-07-28"
     },
     {
         "id": "zhou-keyu",
@@ -34,6 +35,7 @@ const PEOPLE = [
         "dob": "2002",
         "ethnicity": [
             "Chinese"
-        ]
+        ],
+        "lastAdded": "2026-07-28"
     }
 ];
