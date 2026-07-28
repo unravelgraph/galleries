@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Add "All" button first
-    filterContainer.prepend = `
+    filterContainer.innerHTML = `
         <button data-filter="*">
             All
         </button>
@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = `gallery-card ${ethnicityClasses}`;
 
         card.innerHTML = `
-            <h2>${person.name}</h2>
-            <p>${person.dob}</p>
-            <p>${person.lastAdded}</p>
+            <div class="fcname">${person.name}</div>
+            <div class="dob">${person.dob}</div>
+            <div class="lastupdate">${person.lastAdded}</div>
         `;
 
         container.appendChild(card);
