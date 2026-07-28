@@ -92,19 +92,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         card.innerHTML = `
             <div class="fcname">${person.name}</div>
-            <div class="dob">${person.dob}</div>
+
+            <div class="dob">
+                ${person.dob} (${age} years old)
+            </div>
+
             ${
-            Object.entries(person.folders)
-            .map(([folder, files]) => `
+                Object.entries(person.folders)
+                .map(([folder, files]) => `
 
-                <div class="fc${folder}">
-                    ${files.length} ${folder}
-                </div>
+                    <div class="fc${folder}">
+                        ${files.length} ${folder}
+                    </div>
 
-            `)
-            .join("")
-        }
-            <div class="lastupdate">${person.lastAdded}</div>
+                `)
+                .join("")
+            }
+
+            <div class="lastupdate">
+                ${person.lastAdded}
+            </div>
         `;
 
         container.appendChild(card);
