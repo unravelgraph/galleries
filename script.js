@@ -131,71 +131,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
-        percentPosition: true,
-    
+        layoutMode: "vertical",
+
         filter: function(itemElem) {
 
-            const matchesEthnicity =
-                selectedEthnicity === "*" ||
-                itemElem.classList.contains(
-                    selectedEthnicity.replace(".", "")
-                );
-
-
             const age = Number(itemElem.dataset.age);
-
 
             const matchesAge =
                 age >= minAge &&
                 age <= maxAge;
 
+            const matchesEthnicity =
+                selectedEthnicity === "*" ||
+                itemElem.matches(selectedEthnicity);
 
-            return matchesEthnicity && matchesAge;
-
+            return matchesAge && matchesEthnicity;
         }
     });
 
-    const minSlider = document.querySelector("#min-age");
-    const maxSlider = document.querySelector("#max-age");
-    const ageMinValue = document.querySelector("#age-min-value");
-    const ageMaxValue = document.querySelector("#age-max-value");
+    let minAge = 18;
+    let maxAge = 100;
 
+    const ageSlider = document.querySelector("#age-slider");
+    const ageRange = document.querySelector("#age-range");
 
-    function updateAgeFilter() {
-
-        minAge = Number(minSlider.value);
-        maxAge = Number(maxSlider.value);
-
-        if (minAge > maxAge) {
-            if (this === minSlider) {
-                maxAge = minAge;
-                maxSlider.value = maxAge;
-            } else {
-                minAge = maxAge;
-                minSlider.value = minAge;
-            }
+    noUiSlider.create(ageSlider, {
+        start: [18, 100],
+        connect: true,
+        step: 1,
+        range: {
+            min: 18,
+            max: 100
         }
+    });
 
-        ageMinValue.textContent = minAge;
-        ageMaxValue.textContent = maxAge;
+    ageSlider.noUiSlider.on("update", (values) => {
+
+        minAge = Math.round(values[0]);
+        maxAge = Math.round(values[1]);
+
+        ageRange.textContent = `${minAge} – ${maxAge}`;
 
         iso.arrange();
-    }
 
-
-    minSlider.addEventListener(
-        "input",
-        updateAgeFilter
-    );
-
-
-    maxSlider.addEventListener(
-        "input",
-        updateAgeFilter
-    );
-
-
-    updateAgeFilter();
+    });
 
     document.querySelectorAll("#filters button")
         .forEach(button => {

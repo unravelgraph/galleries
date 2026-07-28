@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unravel's graph galleries</title> 
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css"><
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
 </head>
 
 <body>
@@ -17,26 +19,9 @@
     <div id="filters"></div>
     
     <div id="age-filter">
-        
-        <span id="age-min-value"></span>
 
-        <input 
-            type="range"
-            id="min-age"
-            min="18"
-            max="100"
-            value="18"
-        >
-
-        <input 
-            type="range"
-            id="max-age"
-            min="18"
-            max="100"
-            value="100"
-        >
-
-        <span id="age-max-value"></span>
+        <span id="age-range"></span>
+        <div id="age-slider"></div>
 
     </div>
 
