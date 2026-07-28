@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
+        percentPosition: true,
         layoutMode: "vertical",
         filter: function(itemElem) {
 
