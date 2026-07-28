@@ -55,7 +55,12 @@ folders.forEach(folder => {
                     latestDate = stats.mtime;
                 }
 
-                return file;
+                return {
+                    name: file,
+                    date: stats.mtime
+                        .toISOString()
+                        .split("T")[0]
+                };
 
             });
 

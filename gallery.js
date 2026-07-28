@@ -19,7 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    const files = person.folders[folderName];
+    const files = person.folders[folderName]
+    .sort((a, b) =>
+        new Date(b.date) - new Date(a.date)
+    );
 
 
     if (!files) {
@@ -29,22 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     document.querySelector("#gallery-title").textContent =
-        `${person.name} - ${folderName}`;
+        `${person.name} - ${folderName} (${files.length})`;
 
 
 
     const container = document.querySelector("#gallery-images");
 
-
     files.forEach(file => {
 
         const img = document.createElement("img");
 
-        img.src = 
-            `assets/${person.folder}/${folderName}/${file}`;
+        img.src =
+            `assets/${person.folder}/${folderName}/${file.name}`;
 
-        img.alt = person.name;
-
+        img.alt = `${person.name} ${folderName}`;
+        img.loading = "lazy";
 
         container.appendChild(img);
 
