@@ -166,20 +166,20 @@ document.addEventListener("DOMContentLoaded", () => {
         minAge = Number(minSlider.value);
         maxAge = Number(maxSlider.value);
 
-
-        // Prevent min going above max
         if (minAge > maxAge) {
-            minAge = maxAge;
-            minSlider.value = minAge;
+            if (this === minSlider) {
+                maxAge = minAge;
+                maxSlider.value = maxAge;
+            } else {
+                minAge = maxAge;
+                minSlider.value = minAge;
+            }
         }
 
-
-        ageMinValue.textContent = `${minAge}`;
-        ageMinValue.textContent = `${maxAge}`;
-
+        ageMinValue.textContent = minAge;
+        ageMaxValue.textContent = maxAge;
 
         iso.arrange();
-
     }
 
 
