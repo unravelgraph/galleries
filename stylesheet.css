@@ -61,4 +61,5 @@ button#popup-agree {
     border: 1px solid var(--bg3);
     padding: 7px 10px;
     cursor:pointer;
+    margin-top: 23px;
 }
