@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             columnWidth: '100%',
             gutter:0
           }
-        filter: function(itemElem) {
+        filters: function(itemElem) {
 
             const matchesEthnicity =
                 selectedEthnicity === "*" ||
