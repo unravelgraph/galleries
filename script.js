@@ -149,9 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    let minAge = 18;
-    let maxAge = 100;
-
     const ageSlider = document.querySelector("#age-slider");
     const ageRange = document.querySelector("#age-range");
 
