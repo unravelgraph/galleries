@@ -26,6 +26,11 @@ const PEOPLE = [
                 "zlh2.gif"
             ]
         },
+        "name": "Zhang Linghe",
+        "dob": "1997",
+        "ethnicity": [
+            "Chinese"
+        ],
         "lastAdded": "2026-07-28"
     },
     {
