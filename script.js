@@ -157,7 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const minSlider = document.querySelector("#min-age");
     const maxSlider = document.querySelector("#max-age");
-    const ageValue = document.querySelector("#age-value");
+    const ageMinValue = document.querySelector("#age-min-value");
+    const ageMaxValue = document.querySelector("#age-max-value");
 
 
     function updateAgeFilter() {
@@ -173,7 +174,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        ageValue.textContent = `${minAge} - ${maxAge}`;
+        ageMinValue.textContent = `${minAge}`;
+        ageMinValue.textContent = `${maxAge}`;
 
 
         iso.arrange();
