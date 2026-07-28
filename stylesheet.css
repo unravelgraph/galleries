@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
 :root {
     --bg1: #141419;
@@ -21,7 +21,7 @@ body {
     height: 100vh;
 }
 
-h1{font:300 italic 2rem 'Fraunces', serif;}
+h1, .navbar a{font:300 italic 2rem 'Fraunces', serif;}
 
 #gallery-grid {display:grid;grid-template: 1fr 1fr / 1fr .5fr .5fr 2fr 1fr; gap:0 20px;align-items: center; margin-top: 1.5%;}
 .gallery-card {position:relative!important; width:100%; display:grid;grid-template-columns:subgrid;grid-column:1/-1;}
