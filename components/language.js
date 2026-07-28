@@ -24,9 +24,7 @@ async function loadLanguage() {
 
             const key = element.dataset.lang;
 
-            element.innerHTML =
-                (translations[key] || key)
-                    .replace(/\n/g, "<br>");
+            element.innerHTML = translations[key];
 
         });
 

@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.display = "none";
     }
 
-
     agree.addEventListener("click", () => {
 
         overlay.style.display = "none";

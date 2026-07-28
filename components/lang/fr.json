@@ -1,5 +1,7 @@
 {
     "popup_title": "Règles",
-    "popup_text": "Ne republiez pas ces contenus en les faisant passer pour les vôtres et ne vous les appropriez pas.\nNe les utilisez pas pour faire du roleplay avec de vraies personnes (c'est-à-dire incarner des célébrités en prétendant être elles-mêmes) ou pour des contextes harry potter.\nMerci de me créditer : .unravel",
+    "popup_text": "Ne republiez pas ces contenus en les <b>faisant passer pour les vôtres</b> et ne vous les appropriez pas.
+    <br/>Ne les utilisez pas pour faire du <b>roleplay de vraies personnes</b> (c'est-à-dire incarner des célébrités en prétendant être elles-mêmes) ou pour des <i>contextes harry potter</i>.
+    <br/>Merci de me créditer : .unravel",
     "popup_button": "Je comprends et j'accepte de respecter les règles"
 }
