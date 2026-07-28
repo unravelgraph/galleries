@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.querySelector("#gallery-grid");
 
+    console.log("Container:", container);
+    console.log("People:", PEOPLE);
+
     PEOPLE.forEach(person => {
+
+        console.log("Adding:", person.name);
 
         const card = document.createElement("div");
 
@@ -18,7 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${person.lastAdded}</p>
         `;
 
+        console.log("Card created:", card);
+
         container.appendChild(card);
+
+        console.log("Container now:", container.innerHTML);
 
     });
 
