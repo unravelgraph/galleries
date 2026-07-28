@@ -1,6 +1,6 @@
 const navbar = document.querySelector("#navbar");
 
-fetch("navbar.html")
+fetch("components/navbar.html")
         .then(response => response.text())
         .then(html => {
 
