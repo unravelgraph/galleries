@@ -97,17 +97,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${person.dob} (${age} years old)
             </div>
 
+            <div class="fcgalleries">
             ${
                 Object.entries(person.folders)
                 .map(([folder, files]) => `
 
-                    <div class="fc${folder}">
+                    <a class="fc${folder}galleries">
                         ${files.length} ${folder}
-                    </div>
+                    </a>
 
                 `)
                 .join("")
             }
+            </div>
 
             <div class="lastupdate">
                 ${person.lastAdded}
