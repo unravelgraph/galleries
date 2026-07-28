@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Generate filters
     const filterContainer = document.querySelector("#filters");
+    debug("Filter container:", filterContainer);
+
     const ethnicities = new Set();
 
     PEOPLE.forEach(person => {
@@ -48,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    debug("Ethnicities:", [...ethnicities]);
+
 
     // Add Cards
     debug("People:", PEOPLE);
@@ -57,11 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const card = document.createElement("div");
 
-        const ethnicities = (person.ethnicities || [])
+        const ethnicityClasses = (person.ethnicities || [])
             .map(e => e.replace(/\s+/g, "-"))
             .join(" ");
 
-        card.className = `gallery-card ${ethnicities}`;
+        card.className = `gallery-card ${ethnicityClasses}`;
 
         card.innerHTML = `
             <h2>${person.name}</h2>
@@ -79,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
-        layoutMode: "fitRows"
+        layoutMode: "vertical"
     });
 
     document.querySelectorAll("#filters button")
