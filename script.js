@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterContainer = document.querySelector("#filters");
     debug("Filter container:", filterContainer);
 
-    const ethnicities = new Set();
+    const ethnicity = new Set();
 
     PEOPLE.forEach(person => {
 
-        (person.ethnicities || [])
-            .forEach(e => ethnicities.add(e));
+        (person.ethnicity || [])
+            .forEach(e => ethnicity.add(e));
 
     });
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
 
-    ethnicities.forEach(ethnicity => {
+    ethnicity.forEach(ethnicity => {
 
         const button = document.createElement("button");
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    debug("Ethnicities:", [...ethnicities]);
+    debug("Ethnicities:", [...ethnicity]);
 
 
     // Add Cards
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const card = document.createElement("div");
 
-        const ethnicityClasses = (person.ethnicities || [])
+        const ethnicityClasses = (person.ethnicity || [])
             .map(e => e.replace(/\s+/g, "-"))
             .join(" ");
 
