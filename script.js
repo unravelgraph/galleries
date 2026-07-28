@@ -133,8 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
           masonry: {
             columnWidth: '100%',
             gutter:0
-          }
-        filters: function(itemElem) {
+          },
+        filter: function(itemElem) {
 
             const matchesEthnicity =
                 selectedEthnicity === "*" ||
