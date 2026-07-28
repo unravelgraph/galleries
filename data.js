@@ -4,7 +4,10 @@ const PEOPLE = [
         "folder": "bae ganghee",
         "folders": {
             "avatars": [
-                "ganghee1.gif"
+                {
+                    "name": "ganghee1.gif",
+                    "date": "2026-07-28"
+                }
             ]
         },
         "name": "Bae Ganghee",
@@ -19,10 +22,16 @@ const PEOPLE = [
         "folder": "heyu",
         "folders": {
             "avatars": [
-                "heyu1.gif"
+                {
+                    "name": "heyu1.gif",
+                    "date": "2026-07-28"
+                }
             ],
             "gifs": [
-                "heyugif1.gif"
+                {
+                    "name": "heyugif1.gif",
+                    "date": "2026-07-28"
+                }
             ]
         },
         "name": "He Yu",
@@ -37,8 +46,14 @@ const PEOPLE = [
         "folder": "zhang linghe",
         "folders": {
             "avatars": [
-                "zlh1.gif",
-                "zlh2.gif"
+                {
+                    "name": "zlh1.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "zlh2.gif",
+                    "date": "2026-07-28"
+                }
             ]
         },
         "name": "Zhang Linghe",
@@ -53,13 +68,28 @@ const PEOPLE = [
         "folder": "zhou keyu",
         "folders": {
             "avatars": [
-                "keyu1.gif"
+                {
+                    "name": "keyu1.gif",
+                    "date": "2026-07-28"
+                }
             ],
             "gifs": [
-                "keyu2.gif",
-                "keyu3.gif",
-                "keyu4.gif",
-                "keyu5.gif"
+                {
+                    "name": "keyu2.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu3.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu4.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu5.gif",
+                    "date": "2026-07-28"
+                }
             ]
         },
         "name": "Daniel Zhou Keyu",
