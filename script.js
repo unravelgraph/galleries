@@ -104,7 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 Object.entries(person.folders)
                 .map(([folder, files]) => `
 
-                    <a class="fc${folder}galleries">
+                    <a 
+                        class="fc${folder}galleries"
+                        href="gallery.html?person=${person.id}&folder=${folder}">
                         ${files.length} ${folder}
                     </a>
 
