@@ -53,3 +53,12 @@ body {
     color: var(--tx1);
 }
 
+button#popup-agree {
+    background: var(--tx1);
+    color: var(--bg1);
+    font-weight: bold;
+    box-shadow: none;
+    border: 1px solid var(--bg3);
+    padding: 7px 10px;
+    cursor:pointer;
+}
