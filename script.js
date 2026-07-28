@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="lastupdate">
-                ${person.lastAdded}
+                <i>last update:</i> ${person.lastAdded}
             </div>
         `;
 
