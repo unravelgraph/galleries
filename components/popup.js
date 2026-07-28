@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    loadLanguage();
+    
     const overlay = document.querySelector("#popup-overlay");
-    const close = document.querySelector("#popup-close");
+    const agree = document.querySelector("#popup-agree");
 
-    if (!overlay || !close) return;
+    if (!overlay || !agree) return;
 
-    if (sessionStorage.getItem("popupClosed") === "true") {
+
+    if (sessionStorage.getItem("popupAgreed") === "true") {
         overlay.style.display = "none";
     }
 
 
-    close.addEventListener("click", () => {
+    agree.addEventListener("click", () => {
 
         overlay.style.display = "none";
 
         sessionStorage.setItem(
-            "popupClosed",
+            "popupAgreed",
             "true"
         );
 
