@@ -1,5 +1,20 @@
 const PEOPLE = [
     {
+        "id": "bae-ganghee",
+        "folder": "bae ganghee",
+        "folders": {
+            "avatars": [
+                "ganghee1.gif"
+            ]
+        },
+        "name": "Bae Ganghee",
+        "dob": "1997",
+        "ethnicity": [
+            "Korean"
+        ],
+        "lastAdded": "2026-07-28"
+    },
+    {
         "id": "heyu",
         "folder": "heyu",
         "folders": {
