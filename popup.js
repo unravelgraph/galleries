@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!overlay || !close) return;
 
-
-    // Check if popup was already closed during this session
     if (sessionStorage.getItem("popupClosed") === "true") {
         overlay.style.display = "none";
     }
