@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Add "All" button first
-    filterContainer.innerHTML = `
+    filterContainer.prepend = `
         <button data-filter="*">
             All
         </button>
