@@ -12,7 +12,7 @@ async function loadLanguage() {
 
 
     const response = await fetch(
-        `lang/${lang}.json`
+        `components/lang/${lang}.json`
     );
 
 
