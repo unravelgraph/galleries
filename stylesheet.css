@@ -27,7 +27,7 @@ h1 {
 }
 
 #gallery-grid {display:grid;grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;align-items: center;}
-.gallery-card {position:relative!important; display:grid;grid-template-columns:subgrid;grid-column:1/-1;}
+.gallery-card {position:relative!important; width:100%; display:grid;grid-template-columns:subgrid;grid-column:1/-1;}
 
 
 .toolbar {
