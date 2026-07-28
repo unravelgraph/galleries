@@ -32,6 +32,11 @@ h1 {
 .fcavatarsgalleries{grid-column:1/2;}
 .fcgifsgalleries{grid-column:2/3;}
 
+#gallery-images {display:flex;flex-wrap: wrap; gap:10px;}
+#gallery-images img{object-fit:cover;}
+#gallery-images.avatars img{width:200px;height:320px;}
+#gallery-images.gifs img{width:200px;height:120px;}
+
 
 .toolbar {
     display: flex;
