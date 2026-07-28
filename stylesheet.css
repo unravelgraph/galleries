@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
 
 :root {
     --bg1: #141419;
@@ -17,9 +17,11 @@ body {
     padding: 40px;
     background: var(--bg1);
     color: var(--tx1);
-    font-family: Inter, sans-serif;
+    font: 300 1rem 'Chivo';
     height: 100vh;
 }
+
+h1{font: 800 1rem 'Syne';text-transform:uppercase;}
 
 #gallery-grid {display:grid;grid-template: 1fr 1fr / 1fr .5fr .5fr 2fr 1fr; gap:0 20px;align-items: center;}
 .gallery-card {position:relative!important; width:100%; display:grid;grid-template-columns:subgrid;grid-column:1/-1;}
