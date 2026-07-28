@@ -1,2 +1,0 @@
-# galleries
-rpg graph assets
