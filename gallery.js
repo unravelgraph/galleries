@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const container = document.querySelector("#gallery-images");
+    container.className = `${folderName}`;
 
     files.forEach(file => {
 
