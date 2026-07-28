@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
     const params = new URLSearchParams(window.location.search);
 
 
@@ -31,10 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    document.querySelector("#gallery-title").textContent =
-        `${person.name} - ${folderName} (${files.length})`;
-
-
+    const navbar = document.querySelector("nav");
+    navbar.innerHTML = '<a href="index.html">galleries</a> <a href="#">${person.name} - ${folderName} (${files.length})</a>';
 
     const container = document.querySelector("#gallery-images");
     container.className = `${folderName}`;
