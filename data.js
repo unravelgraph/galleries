@@ -18,6 +18,17 @@ const PEOPLE = [
         "lastAdded": "2026-07-28"
     },
     {
+        "id": "zhang-linghe",
+        "folder": "zhang linghe",
+        "folders": {
+            "avatars": [
+                "zlh1.gif",
+                "zlh2.gif"
+            ]
+        },
+        "lastAdded": "2026-07-28"
+    },
+    {
         "id": "zhou-keyu",
         "folder": "zhou keyu",
         "folders": {
