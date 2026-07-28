@@ -5,35 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unravel's graph galleries</title>
-    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-<div class="container">
-    <h1>Ma galerie</h1> 
-    <!-- caché au départ -->
-    <div class="toolbar">
-        <button id="back" class="hidden">
-            ← Retour
-        </button>
 
-        <!-- fil d'ariane -->
-        <span id="breadcrumb"></span>
-    </div>
-    <!-- pour afficher les dossiers et les images -->
-    <div id="gallery"></div>
+<h1>Galleries</h1>
+
+<div id="filters">
+
+    <button data-filter="*">
+        All
+    </button>
+
+    <button data-filter=".chinese">
+        Chinese
+    </button>
+
 </div>
 
-<div id="preview" class="preview hidden">
-    <div class="preview-content">
-        <button id="prevImage" class="nav prev">←</button>
 
-        <img id="previewImage" src="" alt="">
+<div id="gallery-grid"></div>
 
-        <button id="nextImage" class="nav next">→</button>
-    </div>
-</div>
 
-<script src="./script.js"></script>
+<script src="isotope.pkgd.min.js"></script>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+
 </body>
 </html>
