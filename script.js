@@ -128,7 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
         percentPosition: true,
-        layoutMode: "vertical",
+          masonry: {
+            columnWidth: '100%',
+            gutter:0
+          }
         filter: function(itemElem) {
 
             const matchesEthnicity =
