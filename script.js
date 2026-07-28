@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.querySelector("#gallery-grid");
 
-    debug("Container:", container);
+    //debug("Container:", container);
 
 
     // Generate filters
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Add Cards
-    debug("People:", PEOPLE);
+    //debug("People:", PEOPLE);
     PEOPLE.forEach(person => {
 
         debug("Adding:", person.name);
@@ -73,11 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${person.lastAdded}</p>
         `;
 
-        debug("Card created:", card);
-
         container.appendChild(card);
-
-        debug("Container now:", container.innerHTML);
 
     });
 
