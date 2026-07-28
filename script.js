@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         minAge = Math.round(values[0]);
         maxAge = Math.round(values[1]);
 
-        ageRange.textContent = `${minAge} – ${maxAge}`;
+        ageRange.textContent = `aged between ${minAge} – ${maxAge}yo`;
 
         iso.arrange();
 
