@@ -152,6 +152,236 @@ const PEOPLE = [
                     "name": "xinhai2.gif",
                     "date": "2026-07-28"
                 }
+            ],
+            "gifs": [
+                {
+                    "name": "xinhai1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai27.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai28.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai29.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai30.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai31.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai32.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai33.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai34.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai35.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai36.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai37.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai38.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai39.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai40.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai41.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai42.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai43.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai44.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai45.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai46.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai47.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai48.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai49.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai50.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai51.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai52.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai53.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai54.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai55.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai56.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai57.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai9.gif",
+                    "date": "2026-07-29"
+                }
             ]
         },
         "name": "Chen Xinhai",
