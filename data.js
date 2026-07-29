@@ -40,6 +40,44 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "cheng-lei",
+        "folder": "cheng lei",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "chenglei1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chenglei2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chenglei3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chenglei4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chenglei5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chenglei6.png",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "cheng lei",
+        "dob": "1993",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
         "id": "fan-zhixin",
         "folder": "fan zhixin",
         "folders": {
@@ -495,6 +533,52 @@ const PEOPLE = [
             ]
         },
         "name": "Wang Anyu",
+        "dob": "1998",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
+        "id": "yu-chengen",
+        "folder": "yu chengen",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "chengen1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "chengen8.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "yu chengen",
         "dob": "1998",
         "ethnicity": [
             "Chinese"
