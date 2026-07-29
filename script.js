@@ -134,8 +134,19 @@ document.addEventListener("DOMContentLoaded", () => {
         itemSelector: ".gallery-card",
         layoutMode: "vertical",
 
-         getSortData: {name: ".fcname"},
-         sortBy: "name",
+        getSortData: {
+            name: function(itemElem) {
+
+                return itemElem
+                    .querySelector(".fcname")
+                    .textContent
+                    .trim()
+                    .toLocaleLowerCase();
+
+            }
+        },
+        sortBy: "name",
+        sortAscending: true,
 
         filter: function(itemElem) {
 
