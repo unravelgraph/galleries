@@ -853,6 +853,110 @@ const PEOPLE = [
                 {
                     "name": "anyu2.gif",
                     "date": "2026-07-29"
+                },
+                {
+                    "name": "way1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way9.gif",
+                    "date": "2026-07-29"
                 }
             ]
         },
@@ -1027,6 +1131,204 @@ const PEOPLE = [
                 {
                     "name": "zlh2.gif",
                     "date": "2026-07-28"
+                }
+            ],
+            "gifs": [
+                {
+                    "name": "linghe1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe27.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe28.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe29.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe30.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe31.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe32.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe33.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe34.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe35.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe36.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe37.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe38.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe39.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe40.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe41.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe42.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe43.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe44.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe45.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe46.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe47.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe48.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe49.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "linghe9.gif",
+                    "date": "2026-07-29"
                 }
             ]
         },
