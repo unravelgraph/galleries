@@ -2,8 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 const assetsPath = "./assets";
+const miscPath = "./assets/misc";
 const outputPath = "./data.js";
 
+const misc = fs.readdirSync(miscPath)
+    .filter(file =>
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+    );
 const people = [];
 
 const folders = fs.readdirSync(assetsPath);
@@ -82,7 +87,9 @@ folders.forEach(folder => {
 
 
 const output =
-`const PEOPLE = ${JSON.stringify(people, null, 4)};`;
+`const PEOPLE = ${JSON.stringify(people, null, 4)};
+
+const MISC = ${JSON.stringify(misc, null, 4)};`;
 
 fs.writeFileSync(outputPath, output);
 
