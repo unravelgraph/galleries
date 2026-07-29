@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const assetsPath = "./assets";
-const miscPath = "./assets/misc";
+const miscPath = "./misc";
 const outputPath = "./data.js";
 
 const misc = fs.readdirSync(miscPath)

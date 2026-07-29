@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.innerHTML = `
             <img 
-                src="assets/misc/${file}"
+                src="misc/${file}"
                 loading="lazy"
             >
         `;
