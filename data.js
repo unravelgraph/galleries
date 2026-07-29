@@ -38,10 +38,112 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "bao-shangen",
+        "folder": "bao shangen",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "shangen1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "shangen9.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "bao shangen",
+        "dob": "2002",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
         "id": "chen-xinhai",
         "folder": "chen xinhai",
         "folders": {
             "avatars": [
+                {
+                    "name": "xinhai1.png",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "xinhai9.gif",
+                    "date": "2026-07-29"
+                },
                 {
                     "name": "xinhai1.gif",
                     "date": "2026-07-28"
@@ -57,7 +159,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-28"
+        "lastAdded": "2026-07-29"
     },
     {
         "id": "cheng-lei",
