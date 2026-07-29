@@ -15,7 +15,6 @@ const PEOPLE = [
         "ethnicity": [
             "Korean"
         ],
-        "cover": "ganghee1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -38,7 +37,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "xinhai1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -69,7 +67,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "fanzhixin1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -92,7 +89,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "heqiu1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -117,7 +113,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "heyu1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -168,7 +163,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "xueer1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -199,7 +193,6 @@ const PEOPLE = [
         "ethnicity": [
             "Korean"
         ],
-        "cover": "leehan1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -222,7 +215,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "shishi1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -341,7 +333,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "yuxiao1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -368,7 +359,6 @@ const PEOPLE = [
         "ethnicity": [
             "Japanese"
         ],
-        "cover": "nanakomatsu1.jpg",
         "lastAdded": "2026-07-29"
     },
     {
@@ -405,7 +395,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "yujie1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -510,7 +499,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "anyu1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -533,7 +521,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "zlh1.gif",
         "lastAdded": "2026-07-29"
     },
     {
@@ -570,11 +557,13 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "cover": "keyu1.gif",
         "lastAdded": "2026-07-29"
     }
 ];
 
 const MISC = [
-    "asdasd.png"
+    {
+        "name": "asdasd.png",
+        "date": "2026-07-29"
+    }
 ];
