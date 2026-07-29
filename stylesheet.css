@@ -24,6 +24,13 @@ i{font-style:italic;}
 b{font-weight:bold;}
 
 h1, .navbar a{font:300 italic 2rem 'Fraunces', serif; letter-spacing: -3px;transition: 700ms ease; font-variation-settings: "wght" 300;text-decoration:none; color:var(--tx1); text-transform:lowercase;text-shadow: var(--tx1) 0px 0px 4px;}
+
+.header-title {display:flex; justify-content:center; align-items:center;gap:4px;}
+.header-title *{margin:0;}
+.header-title h1{font-size:7em;}
+.header-title h2{font-size:5em; font-weight:150; position:relative;top:18px;}
+#header p{max-width:500px;text-align:center;margin:0 auto; margin-bottom:2%;}
+
 .navbar a:hover{font-variation-settings: "wght" 400;letter-spacing: -2.5px;}
 .navbar a:not(:last-of-type):after{content:'>';padding-left:13px; padding-right:5px;}
 .navbar{background:linear-gradient(45deg, color-mix(in srgb,var(--bg2) 100%,transparent),color-mix(in srgb,var(--bg3) 30%,transparent));border: 1px solid var(--bg3); padding:20px;border-radius:10px; margin-bottom:1.5%; display: flex; justify-content: space-between;}
