@@ -94,9 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = `gallery-card ${ethnicityClasses}`;
 
         card.innerHTML = `
-
-            <img class="cover" src="assets/${person.folder}/avatars/${person.cover}" alt="${person.name}" loading="lazy">
-
             <div class="fcname">${person.name}</div>
 
             <div class="fcethnicity">${person.ethnicity}</div>
