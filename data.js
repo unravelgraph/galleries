@@ -842,6 +842,192 @@ const PEOPLE = [
                     "name": "heqiu2.gif",
                     "date": "2026-07-28"
                 }
+            ],
+            "gifs": [
+                {
+                    "name": "heqiu1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu27.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu28.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu29.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu30.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu31.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu32.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu33.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu34.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu35.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu36.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu37.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu38.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu39.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu40.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu41.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu42.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu43.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu44.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu45.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu46.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu9.gif",
+                    "date": "2026-07-29"
+                }
             ]
         },
         "name": "He Qiu",
