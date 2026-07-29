@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
             <div class="fcname">${person.name}</div>
 
-            <div class="fcname">${person.ethnicity}</div>
+            <div class="fcethnicity">${person.ethnicity}</div>
 
             <div class="dob">
                 ${person.dob} <i>(${age} yo)</i>
