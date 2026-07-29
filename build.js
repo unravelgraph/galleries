@@ -6,116 +6,154 @@ const assetsPath = "./assets";
 const miscPath = "./misc";
 const outputPath = "./data.js";
 
-const people = [];
+const IMAGE_REGEX = /\.(jpg|jpeg|png|gif|webp)$/i;
 
-// ---------- Misc ----------
+function getFileDate(filePath) {
+
+    try {
+
+        const gitDate = execSync(
+            `git log -1 --format=%cs -- "${filePath}"`,
+            {
+                encoding: "utf8",
+                stdio: ["ignore", "pipe", "ignore"]
+            }
+        ).trim();
+
+        if (gitDate) {
+            return gitDate;
+        }
+
+    } catch (e) {
+        // Ignore and fall back to filesystem date
+    }
+
+    return fs.statSync(filePath)
+        .mtime
+        .toISOString()
+        .split("T")[0];
+
+}
+
+const people = [];
 let misc = [];
 
+// ---------- Misc ----------
 if (fs.existsSync(miscPath)) {
 
     misc = fs.readdirSync(miscPath)
-        .filter(file =>
-            /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        )
+        .filter(file => IMAGE_REGEX.test(file))
         .map(file => {
 
             const filePath = path.join(miscPath, file);
 
-            const gitDate = execSync(
-                `git log -1 --format=%cs -- "${filePath}"`,
-                { encoding: "utf8" }
-            ).trim();
-
             return {
                 name: file,
-                date: gitDate
+                date: getFileDate(filePath)
             };
 
-        });
+        })
+        .sort((a, b) =>
+            new Date(b.date) - new Date(a.date)
+        );
 
 }
 
 // ---------- People ----------
-const folders = fs.readdirSync(assetsPath);
+if (fs.existsSync(assetsPath)) {
 
-folders.forEach(folder => {
+    fs.readdirSync(assetsPath).forEach(folder => {
 
-    const personPath = path.join(assetsPath, folder);
+        const personPath = path.join(assetsPath, folder);
 
-    if (!fs.statSync(personPath).isDirectory()) return;
+        if (!fs.statSync(personPath).isDirectory()) {
+            return;
+        }
 
-    const person = {
-        id: folder.toLowerCase().replace(/\s+/g, "-"),
-        folder: folder,
-        folders: {}
-    };
+        const person = {
+            id: folder.toLowerCase().replace(/\s+/g, "-"),
+            folder,
+            folders: {}
+        };
 
-    // Read person.json
-    const jsonPath = path.join(personPath, "person.json");
+        // person.json
+        const jsonPath = path.join(personPath, "person.json");
 
-    if (fs.existsSync(jsonPath)) {
+        if (fs.existsSync(jsonPath)) {
 
-        Object.assign(
-            person,
-            JSON.parse(
-                fs.readFileSync(jsonPath, "utf8")
-            )
-        );
+            Object.assign(
+                person,
+                JSON.parse(
+                    fs.readFileSync(jsonPath, "utf8")
+                )
+            );
 
-    }
+        }
 
-    let latestDate = null;
+        let latestDate = null;
 
-    // Scan subfolders
-    fs.readdirSync(personPath).forEach(subfolder => {
+        fs.readdirSync(personPath).forEach(subfolder => {
 
-        const subfolderPath = path.join(personPath, subfolder);
+            const subfolderPath = path.join(personPath, subfolder);
 
-        if (!fs.statSync(subfolderPath).isDirectory()) return;
+            if (!fs.statSync(subfolderPath).isDirectory()) {
+                return;
+            }
 
-        const files = fs.readdirSync(subfolderPath)
-            .filter(file =>
-                /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-            )
-            .map(file => {
+            const files = fs.readdirSync(subfolderPath)
+                .filter(file => IMAGE_REGEX.test(file))
+                .map(file => {
 
-                const filePath = path.join(subfolderPath, file);
+                    const filePath = path.join(
+                        subfolderPath,
+                        file
+                    );
 
-                const gitDate = execSync(
-                    `git log -1 --format=%cs -- "${filePath}"`,
-                    { encoding: "utf8" }
-                ).trim();
+                    const date = getFileDate(filePath);
 
-                if (
-                    !latestDate ||
-                    new Date(gitDate) > new Date(latestDate)
-                ) {
-                    latestDate = gitDate;
-                }
+                    if (
+                        !latestDate ||
+                        new Date(date) > new Date(latestDate)
+                    ) {
+                        latestDate = date;
+                    }
 
-                return {
-                    name: file,
-                    date: gitDate
-                };
+                    return {
+                        name: file,
+                        date
+                    };
 
-            });
+                })
+                .sort((a, b) =>
+                    new Date(b.date) - new Date(a.date)
+                );
 
-        person.folders[subfolder] = files;
+            person.folders[subfolder] = files;
+
+        });
+
+        person.lastAdded = latestDate;
+
+        people.push(person);
 
     });
 
-    person.lastAdded = latestDate;
+}
 
-    people.push(person);
-
-});
+// ---------- Sort people alphabetically ----------
+people.sort((a, b) =>
+    (a.name || a.folder).localeCompare(
+        b.name || b.folder
+    )
+);
 
 // ---------- Output ----------
-const output =
-`const PEOPLE = ${JSON.stringify(people, null, 4)};
+const output = `const PEOPLE = ${JSON.stringify(people, null, 4)};
 
 const MISC = ${JSON.stringify(misc, null, 4)};`;
 
 fs.writeFileSync(outputPath, output);
 
-console.log("Generated data.js");
+console.log(
+    `Generated data.js (${people.length} people, ${misc.length} misc files)`
+);
