@@ -360,3 +360,7 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     }
 ];
+
+const MISC = [
+    "asdasd.png"
+];
