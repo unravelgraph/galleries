@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
 :root {
-    --bg1: #141419;
-    --bg2: #1d1d29;
-    --bg3: #3a3a55;
-    --bg4: #616a75;
-    --tx1: #d2d1c1;
+    --bg1: #1c181b;
+    --bg2: #49708A;
+    --bg3: #643759;
+    --tx1: #ebebe5;
 }
 
 * {
@@ -40,7 +39,7 @@ input#search {margin-right: 20px;}
 
 .fcname{font:300 italic 1.2rem 'Fraunces', serif;text-transform:uppercase;}
 .fcgalleries {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
-.fcgalleries a{background:var(--bg4);width:fit-content;padding:5px 8px;border-radius:3px; text-decoration:none; color:var(--tx1);}
+.fcgalleries a{background:var(--bg3);width:fit-content;padding:5px 8px;border-radius:3px; text-decoration:none; color:var(--tx1);}
 .fcavatarsgalleries{grid-column:1/2;}
 .fcgifsgalleries{grid-column:2/3;}
 .lastupdate{text-align:right;}
