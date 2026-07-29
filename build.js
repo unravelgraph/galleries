@@ -1,23 +1,47 @@
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 const assetsPath = "./assets";
 const miscPath = "./misc";
 const outputPath = "./data.js";
 
-const misc = fs.readdirSync(miscPath)
-    .filter(file =>
-        /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-    );
 const people = [];
 
+// ---------- Misc ----------
+let misc = [];
+
+if (fs.existsSync(miscPath)) {
+
+    misc = fs.readdirSync(miscPath)
+        .filter(file =>
+            /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+        )
+        .map(file => {
+
+            const filePath = path.join(miscPath, file);
+
+            const gitDate = execSync(
+                `git log -1 --format=%cs -- "${filePath}"`,
+                { encoding: "utf8" }
+            ).trim();
+
+            return {
+                name: file,
+                date: gitDate
+            };
+
+        });
+
+}
+
+// ---------- People ----------
 const folders = fs.readdirSync(assetsPath);
 
 folders.forEach(folder => {
 
     const personPath = path.join(assetsPath, folder);
 
-    // Ignore files
     if (!fs.statSync(personPath).isDirectory()) return;
 
     const person = {
@@ -26,21 +50,23 @@ folders.forEach(folder => {
         folders: {}
     };
 
-
-    // Look for person.json
+    // Read person.json
     const jsonPath = path.join(personPath, "person.json");
 
     if (fs.existsSync(jsonPath)) {
+
         Object.assign(
             person,
-            JSON.parse(fs.readFileSync(jsonPath, "utf8"))
+            JSON.parse(
+                fs.readFileSync(jsonPath, "utf8")
+            )
         );
+
     }
 
-
-    // Scan image folders
     let latestDate = null;
 
+    // Scan subfolders
     fs.readdirSync(personPath).forEach(subfolder => {
 
         const subfolderPath = path.join(personPath, subfolder);
@@ -54,55 +80,37 @@ folders.forEach(folder => {
             .map(file => {
 
                 const filePath = path.join(subfolderPath, file);
-                const stats = fs.statSync(filePath);
 
-                if (!latestDate || stats.mtime > latestDate) {
-                    latestDate = stats.mtime;
+                const gitDate = execSync(
+                    `git log -1 --format=%cs -- "${filePath}"`,
+                    { encoding: "utf8" }
+                ).trim();
+
+                if (
+                    !latestDate ||
+                    new Date(gitDate) > new Date(latestDate)
+                ) {
+                    latestDate = gitDate;
                 }
 
                 return {
                     name: file,
-                    date: stats.mtime
-                        .toISOString()
-                        .split("T")[0]
+                    date: gitDate
                 };
 
             });
 
         person.folders[subfolder] = files;
 
-        if (
-            subfolder === "avatars" &&
-            files.length > 0
-        ) {
-
-            const newest = files.reduce((latest, current) => {
-
-                return new Date(current.date) > new Date(latest.date)
-                    ? current
-                    : latest;
-
-            });
-
-            person.cover = newest.name;
-
-        }
-
     });
 
-
-    if (latestDate) {
-        person.lastAdded = latestDate
-            .toISOString()
-            .split("T")[0];
-    }
-
+    person.lastAdded = latestDate;
 
     people.push(person);
 
 });
 
-
+// ---------- Output ----------
 const output =
 `const PEOPLE = ${JSON.stringify(people, null, 4)};
 
