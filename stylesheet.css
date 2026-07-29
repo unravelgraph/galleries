@@ -21,10 +21,13 @@ body {
     height: 100vh;
 }
 
-h1, .navbar a{font:300 italic 2rem 'Fraunces', serif; letter-spacing: -3px;transition: 700ms ease; font-variation-settings: "wght" 300;text-decoration:none; color:var(--tx1); text-transform:lowercase;}
+i{font-style:italic;}
+b{font-weight:bold;}
+
+h1, .navbar a{font:300 italic 2rem 'Fraunces', serif; letter-spacing: -3px;transition: 700ms ease; font-variation-settings: "wght" 300;text-decoration:none; color:var(--tx1); text-transform:lowercase;text-shadow: var(--tx1) 0px 0px 4px;}
 .navbar a:hover{font-variation-settings: "wght" 400;letter-spacing: -2.5px;}
 .navbar a:not(:last-of-type):after{content:'>';padding-left:13px; padding-right:5px;}
-.navbar{background:var(--bg2); padding:20px;border-radius:10px; margin-bottom:1.5%;}
+.navbar{background:linear-gradient(45deg, color-mix(in srgb,var(--bg2) 100%,transparent),color-mix(in srgb,var(--bg3) 30%,transparent));border: 1px solid var(--bg3); padding:20px;border-radius:10px; margin-bottom:1.5%;}
 
 .allfilters{display:flex; align-items:center;}
 input#search, #filters button {padding: 10px 15px; background:var(--bg3);border:1px solid var(--bg3); color:var(--tx1);} 
@@ -33,12 +36,14 @@ input#search {margin-right: 20px;}
 #filters button:not(:last-of-type,:first-of-type){margin-right:4px;}
 
 #gallery-grid{margin-top: 1.5%;}
-.gallery-card {display:grid;grid-template-columns:1fr .5fr .5fr 2fr 1fr; gap:0 20px;align-items: center; width:100%; padding:20px;margin-bottom:10px; background:var(--bg2); border-radius:5px; text-transform:lowercase;}
+.gallery-card {display:grid;grid-template-columns:1.5fr .5fr .5fr 1.5fr 1fr; gap:0 20px;align-items: center; width:100%; padding:20px;margin-bottom:10px; background:var(--bg2); border-radius:5px; text-transform:lowercase;}
 
-.fcname{font:300 italic 1rem 'Fraunces', serif;text-transform:uppercase;}
+.fcname{font:300 italic 1.2rem 'Fraunces', serif;text-transform:uppercase;}
 .fcgalleries {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
+.fcgalleries a{background:var(--bg4);width:fit-content;padding:5px 8px;border-radius:3px; text-decoration:none; color:var(--tx1);}
 .fcavatarsgalleries{grid-column:1/2;}
 .fcgifsgalleries{grid-column:2/3;}
+.lastupdate{text-align:right;}
 
 #gallery-images {display:flex;flex-wrap: wrap; gap:10px;}
 #gallery-images img{object-fit:cover;}
