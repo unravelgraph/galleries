@@ -128,21 +128,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let selectedEthnicity = "*";
-    let minAge = 18;
-    let maxAge = 100;
     let searchText = "";
 
     const iso = new Isotope(container, {
         itemSelector: ".gallery-card",
         layoutMode: "vertical",
 
+         getSortData: {name: ".fcname"},
+         sortBy: "name",
+
         filter: function(itemElem) {
 
-            const age = Number(itemElem.dataset.age);
-
-            const matchesAge =
-                age >= minAge &&
-                age <= maxAge;
 
             const matchesEthnicity =
                 selectedEthnicity === "*" ||
@@ -156,36 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 name.includes(normalize(searchText));
 
             return (
-                matchesAge &&
                 matchesEthnicity &&
                 matchesSearch
             );
 
         }
-
-    });
-
-    const ageSlider = document.querySelector("#age-slider");
-    const ageRange = document.querySelector("#age-range");
-
-    noUiSlider.create(ageSlider, {
-        start: [18, 100],
-        connect: true,
-        step: 1,
-        range: {
-            min: 18,
-            max: 100
-        }
-    });
-
-    ageSlider.noUiSlider.on("update", (values) => {
-
-        minAge = Math.round(values[0]);
-        maxAge = Math.round(values[1]);
-
-        ageRange.textContent = `aged between ${minAge} – ${maxAge}yo`;
-
-        iso.arrange();
 
     });
 
