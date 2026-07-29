@@ -26,6 +26,12 @@ h1, .navbar a{font:300 italic 2rem 'Fraunces', serif; letter-spacing: -3px;trans
 .navbar a:not(:last-of-type):after{content:'>';padding-left:13px; padding-right:5px;}
 .navbar{background:var(--bg2); padding:20px;border-radius:10px; margin-bottom:1.5%;}
 
+.allfilters{display:flex; align-items:center;}
+input#search, #filters button {padding: 10px 15px; background:var(--bg3);border:1px solid var(--bg3); color:var(--tx1);} 
+input#search {margin-right: 20px;}
+#filters button{text-transform:lowercase;cursor:pointer;}
+#filters button:not(:last-of-type,:first-of-type){margin-right:4px;}
+
 #gallery-grid {display:grid;grid-template: 1fr 1fr / 1fr .5fr .5fr 2fr 1fr; gap:0 20px;align-items: center; margin-top: 1.5%;}
 .gallery-card {position:relative!important; width:100%; display:grid;grid-template-columns:subgrid;grid-column:1/-1;}
 .fcgalleries {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
