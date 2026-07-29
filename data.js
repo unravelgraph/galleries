@@ -418,6 +418,88 @@ const PEOPLE = [
                     "date": "2026-07-29"
                 },
                 {
+                    "name": "anyu10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu9.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (1).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (2).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (3).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (4).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (5).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (6).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (7).gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "way (8).gif",
+                    "date": "2026-07-29"
+                }
+            ],
+            "gifs": [
+                {
+                    "name": "anyu1.gif",
+                    "date": "2026-07-29"
+                },
+                {
                     "name": "anyu2.gif",
                     "date": "2026-07-29"
                 }
