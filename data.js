@@ -28,6 +28,280 @@ const PEOPLE = [
                     "name": "ganghee1.gif",
                     "date": "2026-07-28"
                 }
+            ],
+            "gifs": [
+                {
+                    "name": "ganghee1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee27.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee28.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee29.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee30.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee31.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee32.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee33.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee34.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee35.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee36.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee37.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee38.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee39.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee40.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee41.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee42.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee43.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee44.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee45.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee46.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee47.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee48.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee49.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee50.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee51.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee52.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee53.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee54.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee55.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee56.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee57.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee58.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee59.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee60.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee61.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee62.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee63.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee64.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee65.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee66.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee67.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee68.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee9.gif",
+                    "date": "2026-07-29"
+                }
             ]
         },
         "name": "Bae Ganghee",
