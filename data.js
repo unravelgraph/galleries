@@ -6,7 +6,7 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "ganghee1.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 }
             ]
         },
@@ -15,7 +15,7 @@ const PEOPLE = [
         "ethnicity": [
             "Korean"
         ],
-        "lastAdded": "2026-07-28"
+        "lastAdded": "2026-07-29"
     },
     {
         "id": "heyu",
@@ -24,13 +24,13 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "heyu1.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 }
             ],
             "gifs": [
                 {
                     "name": "heyugif1.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 }
             ]
         },
@@ -39,7 +39,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-28"
+        "lastAdded": "2026-07-29"
     },
     {
         "id": "zhang-linghe",
@@ -48,11 +48,11 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "zlh1.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 },
                 {
                     "name": "zlh2.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 }
             ]
         },
@@ -61,7 +61,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-28"
+        "lastAdded": "2026-07-29"
     },
     {
         "id": "zhou-keyu",
@@ -70,25 +70,25 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "keyu1.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 }
             ],
             "gifs": [
                 {
                     "name": "keyu2.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 },
                 {
                     "name": "keyu3.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 },
                 {
                     "name": "keyu4.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 },
                 {
                     "name": "keyu5.gif",
-                    "date": "2026-07-28"
+                    "date": "2026-07-29"
                 }
             ]
         },
@@ -97,6 +97,6 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-28"
+        "lastAdded": "2026-07-29"
     }
 ];
