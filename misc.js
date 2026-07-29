@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const navbar = document.querySelector(".navbar");
     navbar.innerHTML = `
-        <a href="index.html">Galleries</a>
-        <a href="#">fourre-tout</a>
+        <span><a href="index.html">Galleries</a>
+        <a href="#">fourre-tout</a></span>
     `;
 
     const container = document.querySelector("#misc-grid");
