@@ -5,8 +5,28 @@ const PEOPLE = [
         "folders": {
             "avatars": [
                 {
-                    "name": "ganghee1.gif",
+                    "name": "ganghee2.gif",
                     "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "ganghee1.gif",
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -24,11 +44,11 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "xinhai1.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "xinhai2.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -37,7 +57,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-07-28"
     },
     {
         "id": "cheng-lei",
@@ -78,25 +98,61 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "zhou-keyu",
+        "folder": "zhou keyu",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "keyu1.gif",
+                    "date": "2026-07-28"
+                }
+            ],
+            "gifs": [
+                {
+                    "name": "keyu2.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu3.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu4.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu5.gif",
+                    "date": "2026-07-28"
+                }
+            ]
+        },
+        "name": "Daniel Zhou Keyu",
+        "dob": "2002",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-28"
+    },
+    {
         "id": "fan-zhixin",
         "folder": "fan zhixin",
         "folders": {
             "avatars": [
                 {
                     "name": "fanzhixin1.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "fanzhixin2.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "fanzhixin3.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "fanzhixin4.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -105,7 +161,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-07-28"
     },
     {
         "id": "he-qiu",
@@ -113,12 +169,52 @@ const PEOPLE = [
         "folders": {
             "avatars": [
                 {
-                    "name": "heqiu1.gif",
+                    "name": "heqiu1.png",
                     "date": "2026-07-29"
                 },
                 {
-                    "name": "heqiu2.gif",
+                    "name": "heqiu10.gif",
                     "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu9.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "heqiu1.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "heqiu2.gif",
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -136,13 +232,13 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "heyu1.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ],
             "gifs": [
                 {
                     "name": "heyugif1.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -151,109 +247,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
-    },
-    {
-        "id": "kong-xueer",
-        "folder": "kong xueer",
-        "folders": {
-            "avatars": [
-                {
-                    "name": "xueer1.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer10.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer11.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer2.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer3.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer4.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer5.jpg",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer6.jpg",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "xueer9.gif",
-                    "date": "2026-07-29"
-                }
-            ]
-        },
-        "name": "Snow Kong Xueer",
-        "dob": "1996",
-        "ethnicity": [
-            "Chinese"
-        ],
-        "lastAdded": "2026-07-29"
-    },
-    {
-        "id": "leehan",
-        "folder": "leehan",
-        "folders": {
-            "avatars": [
-                {
-                    "name": "leehan1.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "leehan2.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "leehan3.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "leehan4.gif",
-                    "date": "2026-07-29"
-                }
-            ]
-        },
-        "name": "kim donghyun (leehan)",
-        "dob": "2004",
-        "ethnicity": [
-            "Korean"
-        ],
-        "lastAdded": "2026-07-29"
-    },
-    {
-        "id": "liu-shishi",
-        "folder": "liu shishi",
-        "folders": {
-            "avatars": [
-                {
-                    "name": "shishi1.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "shishi2.gif",
-                    "date": "2026-07-29"
-                }
-            ]
-        },
-        "name": "Liu Shishi",
-        "dob": "1987",
-        "ethnicity": [
-            "Chinese"
-        ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-07-28"
     },
     {
         "id": "lu-yuxiao",
@@ -374,21 +368,73 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "leehan",
+        "folder": "leehan",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "leehan1.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "leehan2.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "leehan3.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "leehan4.gif",
+                    "date": "2026-07-28"
+                }
+            ]
+        },
+        "name": "kim donghyun (leehan)",
+        "dob": "2004",
+        "ethnicity": [
+            "Korean"
+        ],
+        "lastAdded": "2026-07-28"
+    },
+    {
+        "id": "liu-shishi",
+        "folder": "liu shishi",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "shishi1.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "shishi2.gif",
+                    "date": "2026-07-28"
+                }
+            ]
+        },
+        "name": "Liu Shishi",
+        "dob": "1987",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-28"
+    },
+    {
         "id": "nana-komatsu",
         "folder": "nana komatsu",
         "folders": {
             "avatars": [
                 {
                     "name": "nanakomatsu1.jpg",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "nanakomatsu2.jpg",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "nanakomatsu3.jpg",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -397,7 +443,7 @@ const PEOPLE = [
         "ethnicity": [
             "Japanese"
         ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-07-28"
     },
     {
         "id": "shen-yujie",
@@ -406,25 +452,25 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "yujie1.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ],
             "gifs": [
                 {
                     "name": "yujie2.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "yujie3.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "yujie4.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "yujie5.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -433,17 +479,63 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-07-28"
+    },
+    {
+        "id": "kong-xueer",
+        "folder": "kong xueer",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "xueer1.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer10.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer11.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer2.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer3.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer4.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer5.jpg",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer6.jpg",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "xueer9.gif",
+                    "date": "2026-07-28"
+                }
+            ]
+        },
+        "name": "Snow Kong Xueer",
+        "dob": "1996",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-28"
     },
     {
         "id": "wang-anyu",
         "folder": "wang anyu",
         "folders": {
             "avatars": [
-                {
-                    "name": "anyu1.gif",
-                    "date": "2026-07-29"
-                },
                 {
                     "name": "anyu10.gif",
                     "date": "2026-07-29"
@@ -454,10 +546,6 @@ const PEOPLE = [
                 },
                 {
                     "name": "anyu12.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "anyu2.gif",
                     "date": "2026-07-29"
                 },
                 {
@@ -519,6 +607,14 @@ const PEOPLE = [
                 {
                     "name": "way (8).gif",
                     "date": "2026-07-29"
+                },
+                {
+                    "name": "anyu1.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "anyu2.gif",
+                    "date": "2026-07-28"
                 }
             ],
             "gifs": [
@@ -650,11 +746,11 @@ const PEOPLE = [
             "avatars": [
                 {
                     "name": "zlh1.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 },
                 {
                     "name": "zlh2.gif",
-                    "date": "2026-07-29"
+                    "date": "2026-07-28"
                 }
             ]
         },
@@ -663,49 +759,13 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
-    },
-    {
-        "id": "zhou-keyu",
-        "folder": "zhou keyu",
-        "folders": {
-            "avatars": [
-                {
-                    "name": "keyu1.gif",
-                    "date": "2026-07-29"
-                }
-            ],
-            "gifs": [
-                {
-                    "name": "keyu2.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "keyu3.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "keyu4.gif",
-                    "date": "2026-07-29"
-                },
-                {
-                    "name": "keyu5.gif",
-                    "date": "2026-07-29"
-                }
-            ]
-        },
-        "name": "Daniel Zhou Keyu",
-        "dob": "2002",
-        "ethnicity": [
-            "Chinese"
-        ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-07-28"
     }
 ];
 
 const MISC = [
     {
         "name": "asdasd.png",
-        "date": "2026-07-29"
+        "date": "2026-07-28"
     }
 ];
