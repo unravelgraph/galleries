@@ -710,6 +710,56 @@ const PEOPLE = [
         "lastAdded": "2026-07-28"
     },
     {
+        "id": "sun-zhenni",
+        "folder": "sun zhenni",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "zhenni1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "zhenni9.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "sun zhenni",
+        "dob": "2000",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
         "id": "wang-anyu",
         "folder": "wang anyu",
         "folders": {
@@ -982,6 +1032,222 @@ const PEOPLE = [
         },
         "name": "Zhang Linghe",
         "dob": "1997",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
+        "id": "zhang-miaoyi",
+        "folder": "zhang miaoyi",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "miaoyi1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi8.gif",
+                    "date": "2026-07-29"
+                }
+            ],
+            "gifs": [
+                {
+                    "name": "miaoyi1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "miaoyi9.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "zhang miaoyi",
+        "dob": "1998",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
+        "id": "zhou-yiran",
+        "folder": "zhou yiran",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "yiran1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran9.gif",
+                    "date": "2026-07-29"
+                }
+            ],
+            "gifs": [
+                {
+                    "name": "yiran1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yiran3.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "zhou yiran",
+        "dob": "2000",
         "ethnicity": [
             "Chinese"
         ],
