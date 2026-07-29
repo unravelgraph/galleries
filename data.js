@@ -540,6 +540,64 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "wang-churan",
+        "folder": "wang churan",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "churan1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "churan3.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "wang churan",
+        "dob": "1999",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-07-29"
+    },
+    {
         "id": "yu-chengen",
         "folder": "yu chengen",
         "folders": {
