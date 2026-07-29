@@ -42,7 +42,11 @@ input#search {margin-right: 20px;}
 #filters button:not(:last-of-type,:first-of-type){margin-right:4px;}
 
 #gallery-grid{margin-top: 1.5%;}
-.gallery-card {display:grid;grid-template-columns:1.5fr .5fr .5fr 1.5fr 1fr; gap:0 20px;align-items: center; width:100%; padding:20px;margin-bottom:10px; background:var(--bg2); border-radius:5px; text-transform:lowercase;}
+.gallery-card{display:grid;grid-template-columns: auto .8fr .5fr .5fr 1fr .5fr;align-items: center;width:100%;margin-bottom:10px;background:var(--bg2);border-radius:5px;text-transform:lowercase;}
+
+.gallery-card > *:not(img){padding:20px;}
+
+img.cover{width:70px;height:50px;object-fit:cover;margin-left:10px;border-radius:5px; filter:grayscale(1);}
 
 .fcname{font:300 italic 1.2rem 'Fraunces', serif;text-transform:uppercase;}
 .fcgalleries {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
