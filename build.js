@@ -71,6 +71,23 @@ folders.forEach(folder => {
 
         person.folders[subfolder] = files;
 
+        if (
+            subfolder === "avatars" &&
+            files.length > 0
+        ) {
+
+            const newest = files.reduce((latest, current) => {
+
+                return new Date(current.date) > new Date(latest.date)
+                    ? current
+                    : latest;
+
+            });
+
+            person.cover = newest.name;
+
+        }
+
     });
 
 
