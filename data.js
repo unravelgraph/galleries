@@ -226,6 +226,125 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "lu-yuxiao",
+        "folder": "lu yuxiao",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "yuxiao1.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao10.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao11.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao12.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao13.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao14.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao15.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao16.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao17.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao18.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao19.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao20.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao21.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao22.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao23.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao24.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao25.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao26.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao7.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao8.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "yuxiao9.gif",
+                    "date": "2026-07-29"
+                }
+            ]
+        },
+        "name": "Irene Lu Yuxiao",
+        "dob": "1999",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "cover": "yuxiao1.gif",
+        "lastAdded": "2026-07-29"
+    },
+    {
         "id": "nana-komatsu",
         "folder": "nana komatsu",
         "folders": {
