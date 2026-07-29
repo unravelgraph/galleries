@@ -39,7 +39,7 @@ input#search {margin-right: 20px;}
 
 .fcname{font:300 italic 1.2rem 'Fraunces', serif;text-transform:uppercase;}
 .fcgalleries {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
-.fcgalleries a{background:var(--bg3);width:fit-content;padding:5px 8px;border-radius:3px; text-decoration:none; color:var(--tx1);}
+.fcgalleries a{background:var(--bg3);width:fit-content;padding: 9px 8px 5px 8px;border-radius:3px;text-decoration:none;color:var(--tx1);text-transform: uppercase;font-size: 13px;font-weight: 500;}
 .fcavatarsgalleries{grid-column:1/2;}
 .fcgifsgalleries{grid-column:2/3;}
 .lastupdate{text-align:right;}
