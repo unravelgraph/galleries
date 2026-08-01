@@ -1,159 +1,473 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+const sharp = require("sharp");
 
 const assetsPath = "./assets";
 const miscPath = "./misc";
+
+const optimizedPath = "./optimized";
+const thumbsPath = "./thumbs";
+
 const outputPath = "./data.js";
 
-const IMAGE_REGEX = /\.(jpg|jpeg|png|gif|webp)$/i;
+const imageExtensions = /\.(jpg|jpeg|png|gif|webp)$/i;
 
-function getFileDate(filePath) {
+
+// ---------- Helpers ----------
+
+function gitDate(filePath) {
 
     try {
 
-        const gitDate = execSync(
+        return execSync(
             `git log -1 --format=%cs -- "${filePath}"`,
             {
-                encoding: "utf8",
-                stdio: ["ignore", "pipe", "ignore"]
+                encoding: "utf8"
             }
         ).trim();
 
-        if (gitDate) {
-            return gitDate;
-        }
+    } catch {
 
-    } catch (e) {
-        // Ignore and fall back to filesystem date
+        return null;
+
     }
 
-    return fs.statSync(filePath)
-        .mtime
-        .toISOString()
-        .split("T")[0];
+}
+
+
+function ensureFolder(folder) {
+
+    if (!fs.existsSync(folder)) {
+        fs.mkdirSync(folder, {
+            recursive: true
+        });
+    }
 
 }
 
-const people = [];
-let misc = [];
 
-// ---------- Misc ----------
-if (fs.existsSync(miscPath)) {
+// ---------- Convert normal images ----------
 
-    misc = fs.readdirSync(miscPath)
-        .filter(file => IMAGE_REGEX.test(file))
-        .map(file => {
+async function convertImage(input, output) {
 
-            const filePath = path.join(miscPath, file);
-
-            return {
-                name: file,
-                date: getFileDate(filePath)
-            };
-
+    await sharp(input)
+        .resize({
+            width: 800,
+            withoutEnlargement: true
         })
-        .sort((a, b) =>
-            new Date(b.date) - new Date(a.date)
+        .webp({
+            quality: 82,
+            effort: 6
+        })
+        .toFile(output);
+
+}
+
+
+// ---------- Convert animated GIF ----------
+
+function convertGif(input, output) {
+
+    execSync(
+        `ffmpeg -y -i "${input}" -vf "scale='min(800,iw)':-2" -c:v libwebp -q:v 70 -loop 0 "${output}"`,
+        {
+            stdio: "inherit"
+        }
+    );
+
+}
+
+
+// ---------- Thumbnail ----------
+
+async function createThumb(input, output) {
+
+    await sharp(input)
+        .resize({
+            width: 250,
+            withoutEnlargement: true
+        })
+        .webp({
+            quality: 70
+        })
+        .toFile(output);
+
+}
+
+
+// ---------- Process file ----------
+
+async function processFile(
+    input,
+    optimized,
+    thumb
+) {
+
+    ensureFolder(path.dirname(optimized));
+    ensureFolder(path.dirname(thumb));
+
+
+    if (
+        path.extname(input).toLowerCase() === ".gif"
+    ) {
+
+        convertGif(
+            input,
+            optimized
         );
 
+    } else {
+
+        await convertImage(
+            input,
+            optimized
+        );
+
+    }
+
+
+    await createThumb(
+        input,
+        thumb
+    );
+
 }
 
+
+// ---------- Misc ----------
+
+async function buildMisc() {
+
+    const misc = [];
+
+    if (!fs.existsSync(miscPath)) {
+        return misc;
+    }
+
+
+    const files = fs.readdirSync(miscPath)
+        .filter(file => imageExtensions.test(file));
+
+
+    for (const file of files) {
+
+        const input =
+            path.join(
+                miscPath,
+                file
+            );
+
+
+        const output =
+            path.join(
+                optimizedPath,
+                "misc",
+                file.replace(
+                    imageExtensions,
+                    ".webp"
+                )
+            );
+
+
+        const thumb =
+            path.join(
+                thumbsPath,
+                "misc",
+                file.replace(
+                    imageExtensions,
+                    ".webp"
+                )
+            );
+
+
+        await processFile(
+            input,
+            output,
+            thumb
+        );
+
+
+        misc.push({
+
+            name: file.replace(
+                imageExtensions,
+                ".webp"
+            ),
+
+            url: output.replaceAll("\\", "/"),
+
+            thumb: thumb.replaceAll("\\", "/"),
+
+            date: gitDate(input)
+
+        });
+
+    }
+
+
+    return misc;
+
+}
+
+
 // ---------- People ----------
-if (fs.existsSync(assetsPath)) {
 
-    fs.readdirSync(assetsPath).forEach(folder => {
+async function buildPeople() {
 
-        const personPath = path.join(assetsPath, folder);
+    const people = [];
 
-        if (!fs.statSync(personPath).isDirectory()) {
-            return;
+
+    if (!fs.existsSync(assetsPath)) {
+        return people;
+    }
+
+
+    const folders =
+        fs.readdirSync(assetsPath);
+
+
+    for (const folder of folders) {
+
+
+        const personPath =
+            path.join(
+                assetsPath,
+                folder
+            );
+
+
+        if (
+            !fs.statSync(personPath).isDirectory()
+        ) {
+            continue;
         }
 
+
         const person = {
-            id: folder.toLowerCase().replace(/\s+/g, "-"),
+
+            id:
+                folder
+                .toLowerCase()
+                .replace(/\s+/g, "-"),
+
             folder,
+
             folders: {}
+
         };
 
-        // person.json
-        const jsonPath = path.join(personPath, "person.json");
+
+        const jsonPath =
+            path.join(
+                personPath,
+                "person.json"
+            );
+
 
         if (fs.existsSync(jsonPath)) {
 
             Object.assign(
                 person,
                 JSON.parse(
-                    fs.readFileSync(jsonPath, "utf8")
+                    fs.readFileSync(
+                        jsonPath,
+                        "utf8"
+                    )
                 )
             );
 
         }
 
+
         let latestDate = null;
 
-        fs.readdirSync(personPath).forEach(subfolder => {
 
-            const subfolderPath = path.join(personPath, subfolder);
+        const subfolders =
+            fs.readdirSync(personPath);
 
-            if (!fs.statSync(subfolderPath).isDirectory()) {
-                return;
+
+        for (const subfolder of subfolders) {
+
+
+            const subfolderPath =
+                path.join(
+                    personPath,
+                    subfolder
+                );
+
+
+            if (
+                !fs.statSync(subfolderPath).isDirectory()
+            ) {
+                continue;
             }
 
-            const files = fs.readdirSync(subfolderPath)
-                .filter(file => IMAGE_REGEX.test(file))
-                .map(file => {
 
-                    const filePath = path.join(
+            const files = [];
+
+
+            const images =
+                fs.readdirSync(subfolderPath)
+                .filter(file =>
+                    imageExtensions.test(file)
+                );
+
+
+            for (const file of images) {
+
+
+                const input =
+                    path.join(
                         subfolderPath,
                         file
                     );
 
-                    const date = getFileDate(filePath);
 
-                    if (
-                        !latestDate ||
-                        new Date(date) > new Date(latestDate)
-                    ) {
-                        latestDate = date;
-                    }
+                const webpName =
+                    file.replace(
+                        imageExtensions,
+                        ".webp"
+                    );
 
-                    return {
-                        name: file,
-                        date
-                    };
 
-                })
-                .sort((a, b) =>
-                    new Date(b.date) - new Date(a.date)
+                const optimized =
+                    path.join(
+                        optimizedPath,
+                        folder,
+                        subfolder,
+                        webpName
+                    );
+
+
+                const thumb =
+                    path.join(
+                        thumbsPath,
+                        folder,
+                        subfolder,
+                        webpName
+                    );
+
+
+                await processFile(
+                    input,
+                    optimized,
+                    thumb
                 );
 
-            person.folders[subfolder] = files;
 
-        });
+                const date =
+                    gitDate(input);
 
-        person.lastAdded = latestDate;
+
+                if (
+                    date &&
+                    (
+                        !latestDate ||
+                        new Date(date) >
+                        new Date(latestDate)
+                    )
+                ) {
+
+                    latestDate = date;
+
+                }
+
+
+                files.push({
+
+                    name: webpName,
+
+                    url:
+                        optimized
+                        .replaceAll("\\", "/"),
+
+                    thumb:
+                        thumb
+                        .replaceAll("\\", "/"),
+
+                    date
+
+                });
+
+            }
+
+
+            person.folders[subfolder] =
+                files;
+
+        }
+
+
+        person.lastAdded =
+            latestDate;
+
 
         people.push(person);
 
-    });
+    }
+
+
+    return people;
 
 }
 
-// ---------- Sort people alphabetically ----------
-people.sort((a, b) =>
-    (a.name || a.folder).localeCompare(
-        b.name || b.folder
-    )
-);
 
-// ---------- Output ----------
-const output = `const PEOPLE = ${JSON.stringify(people, null, 4)};
+// ---------- Build ----------
 
-const MISC = ${JSON.stringify(misc, null, 4)};`;
+async function build() {
 
-fs.writeFileSync(outputPath, output);
 
-console.log(
-    `Generated data.js (${people.length} people, ${misc.length} misc files)`
-);
+    console.log("Building gallery...");
+
+
+    const people =
+        await buildPeople();
+
+
+    const misc =
+        await buildMisc();
+
+
+    const output =
+`const PEOPLE = ${JSON.stringify(
+    people,
+    null,
+    4
+)};
+
+const MISC = ${JSON.stringify(
+    misc,
+    null,
+    4
+)};`;
+
+
+    fs.writeFileSync(
+        outputPath,
+        output
+    );
+
+
+    console.log(
+        "Generated data.js"
+    );
+
+}
+
+
+build()
+    .then(() => {
+
+        console.log(
+            "Build complete"
+        );
+
+    })
+    .catch(err => {
+
+        console.error(err);
+
+        process.exit(1);
+
+    });
