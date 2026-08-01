@@ -709,6 +709,18 @@ const PEOPLE = [
         "folders": {
             "avatars": [
                 {
+                    "name": "keyu7.gif",
+                    "date": "2026-08-01"
+                },
+                {
+                    "name": "keyu8.gif",
+                    "date": "2026-08-01"
+                },
+                {
+                    "name": "keyu9.gif",
+                    "date": "2026-08-01"
+                },
+                {
                     "name": "keyu2.gif",
                     "date": "2026-07-29"
                 },
@@ -757,7 +769,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-08-01"
     },
     {
         "id": "fan-zhixin",
@@ -1615,6 +1627,14 @@ const PEOPLE = [
         "folders": {
             "avatars": [
                 {
+                    "name": "yujie2.gif",
+                    "date": "2026-08-01"
+                },
+                {
+                    "name": "yujie3.gif",
+                    "date": "2026-08-01"
+                },
+                {
                     "name": "yujie1.gif",
                     "date": "2026-07-28"
                 }
@@ -1643,7 +1663,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-28"
+        "lastAdded": "2026-08-01"
     },
     {
         "id": "kong-xueer",
@@ -1701,6 +1721,10 @@ const PEOPLE = [
         "folders": {
             "avatars": [
                 {
+                    "name": "zhenni10.gif",
+                    "date": "2026-08-01"
+                },
+                {
                     "name": "zhenni1.gif",
                     "date": "2026-07-29"
                 },
@@ -1743,7 +1767,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-07-29"
+        "lastAdded": "2026-08-01"
     },
     {
         "id": "wang-anyu",
