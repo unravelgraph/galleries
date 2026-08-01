@@ -1,14 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-const sharp = require("sharp");
 
 const assetsPath = "./assets";
 const miscPath = "./misc";
 
 const optimizedPath = "./optimized";
-const thumbsPath = "./thumbs";
-
 const outputPath = "./data.js";
 
 const imageExtensions = /\.(jpg|jpeg|png|gif|webp)$/i;
@@ -16,7 +13,18 @@ const imageExtensions = /\.(jpg|jpeg|png|gif|webp)$/i;
 
 // ---------- Helpers ----------
 
-function gitDate(filePath) {
+function ensureFolder(folder) {
+
+    if (!fs.existsSync(folder)) {
+        fs.mkdirSync(folder, {
+            recursive: true
+        });
+    }
+
+}
+
+
+function getGitDate(filePath) {
 
     try {
 
@@ -36,108 +44,47 @@ function gitDate(filePath) {
 }
 
 
-function ensureFolder(folder) {
+// ---------- FFmpeg conversion ----------
 
-    if (!fs.existsSync(folder)) {
-        fs.mkdirSync(folder, {
-            recursive: true
-        });
-    }
+function convertToWebp(input, output) {
 
-}
+    console.log("INPUT:", input);
+    console.log("OUTPUT:", output);
 
+    ensureFolder(path.dirname(output));
 
-// ---------- Convert normal images ----------
+    const isGif =
+        path.extname(input).toLowerCase() === ".gif";
 
-async function convertImage(input, output) {
-
-    await sharp(input)
-        .resize({
-            width: 800,
-            withoutEnlargement: true
-        })
-        .webp({
-            quality: 82,
-            effort: 6
-        })
-        .toFile(output);
-
-}
+    console.log("IS GIF:", isGif);
 
 
-// ---------- Convert animated GIF ----------
+    if (isGif) {
 
-function convertGif(input, output) {
-
-    execSync(
-        `ffmpeg -y -i "${input}" -vf "scale='min(800,iw)':-2" -c:v libwebp -q:v 70 -loop 0 "${output}"`,
-        {
-            stdio: "inherit"
-        }
-    );
-
-}
-
-
-// ---------- Thumbnail ----------
-
-async function createThumb(input, output) {
-
-    await sharp(input)
-        .resize({
-            width: 250,
-            withoutEnlargement: true
-        })
-        .webp({
-            quality: 70
-        })
-        .toFile(output);
-
-}
-
-
-// ---------- Process file ----------
-
-async function processFile(
-    input,
-    optimized,
-    thumb
-) {
-
-    ensureFolder(path.dirname(optimized));
-    ensureFolder(path.dirname(thumb));
-
-
-    if (
-        path.extname(input).toLowerCase() === ".gif"
-    ) {
-
-        convertGif(
-            input,
-            optimized
+        execSync(
+            `ffmpeg -y -i "${input}" -vcodec libwebp -lossless 0 -q:v 70 -loop 0 -an "${output}"`,
+            {
+                stdio: "inherit"
+            }
         );
 
     } else {
 
-        await convertImage(
-            input,
-            optimized
+        execSync(
+            `ffmpeg -y -i "${input}" -c:v libwebp -lossless 0 -q:v 75 "${output}"`,
+            {
+                stdio: "inherit"
+            }
         );
 
     }
-
-
-    await createThumb(
-        input,
-        thumb
-    );
 
 }
 
 
 // ---------- Misc ----------
 
-async function buildMisc() {
+function buildMisc() {
 
     const misc = [];
 
@@ -146,64 +93,53 @@ async function buildMisc() {
     }
 
 
-    const files = fs.readdirSync(miscPath)
-        .filter(file => imageExtensions.test(file));
+    fs.readdirSync(miscPath)
+        .filter(file => imageExtensions.test(file))
+        .forEach(file => {
 
 
-    for (const file of files) {
-
-        const input =
-            path.join(
-                miscPath,
-                file
-            );
+            const input =
+                path.join(
+                    miscPath,
+                    file
+                );
 
 
-        const output =
-            path.join(
-                optimizedPath,
-                "misc",
+            const name =
                 file.replace(
                     imageExtensions,
                     ".webp"
-                )
+                );
+
+
+            const output =
+                path.join(
+                    optimizedPath,
+                    "misc",
+                    name
+                );
+
+
+            convertToWebp(
+                input,
+                output
             );
 
 
-        const thumb =
-            path.join(
-                thumbsPath,
-                "misc",
-                file.replace(
-                    imageExtensions,
-                    ".webp"
-                )
-            );
+            misc.push({
 
+                name,
 
-        await processFile(
-            input,
-            output,
-            thumb
-        );
+                url:
+                    output.replaceAll("\\", "/"),
 
+                date:
+                    getGitDate(input)
 
-        misc.push({
+            });
 
-            name: file.replace(
-                imageExtensions,
-                ".webp"
-            ),
-
-            url: output.replaceAll("\\", "/"),
-
-            thumb: thumb.replaceAll("\\", "/"),
-
-            date: gitDate(input)
 
         });
-
-    }
 
 
     return misc;
@@ -213,7 +149,7 @@ async function buildMisc() {
 
 // ---------- People ----------
 
-async function buildPeople() {
+function buildPeople() {
 
     const people = [];
 
@@ -223,11 +159,8 @@ async function buildPeople() {
     }
 
 
-    const folders =
-        fs.readdirSync(assetsPath);
-
-
-    for (const folder of folders) {
+    fs.readdirSync(assetsPath)
+    .forEach(folder => {
 
 
         const personPath =
@@ -240,7 +173,7 @@ async function buildPeople() {
         if (
             !fs.statSync(personPath).isDirectory()
         ) {
-            continue;
+            return;
         }
 
 
@@ -283,11 +216,8 @@ async function buildPeople() {
         let latestDate = null;
 
 
-        const subfolders =
-            fs.readdirSync(personPath);
-
-
-        for (const subfolder of subfolders) {
+        fs.readdirSync(personPath)
+        .forEach(subfolder => {
 
 
             const subfolderPath =
@@ -300,21 +230,16 @@ async function buildPeople() {
             if (
                 !fs.statSync(subfolderPath).isDirectory()
             ) {
-                continue;
+                return;
             }
 
 
             const files = [];
 
 
-            const images =
-                fs.readdirSync(subfolderPath)
-                .filter(file =>
-                    imageExtensions.test(file)
-                );
-
-
-            for (const file of images) {
+            fs.readdirSync(subfolderPath)
+            .filter(file => imageExtensions.test(file))
+            .forEach(file => {
 
 
                 const input =
@@ -324,40 +249,30 @@ async function buildPeople() {
                     );
 
 
-                const webpName =
+                const name =
                     file.replace(
                         imageExtensions,
                         ".webp"
                     );
 
 
-                const optimized =
+                const output =
                     path.join(
                         optimizedPath,
                         folder,
                         subfolder,
-                        webpName
+                        name
                     );
 
 
-                const thumb =
-                    path.join(
-                        thumbsPath,
-                        folder,
-                        subfolder,
-                        webpName
-                    );
-
-
-                await processFile(
+                convertToWebp(
                     input,
-                    optimized,
-                    thumb
+                    output
                 );
 
 
                 const date =
-                    gitDate(input);
+                    getGitDate(input);
 
 
                 if (
@@ -376,27 +291,24 @@ async function buildPeople() {
 
                 files.push({
 
-                    name: webpName,
+                    name,
 
                     url:
-                        optimized
-                        .replaceAll("\\", "/"),
-
-                    thumb:
-                        thumb
-                        .replaceAll("\\", "/"),
+                        output.replaceAll("\\", "/"),
 
                     date
 
                 });
 
-            }
+
+            });
 
 
             person.folders[subfolder] =
                 files;
 
-        }
+
+        });
 
 
         person.lastAdded =
@@ -405,7 +317,8 @@ async function buildPeople() {
 
         people.push(person);
 
-    }
+
+    });
 
 
     return people;
@@ -415,18 +328,17 @@ async function buildPeople() {
 
 // ---------- Build ----------
 
-async function build() {
-
+function build() {
 
     console.log("Building gallery...");
 
 
     const people =
-        await buildPeople();
+        buildPeople();
 
 
     const misc =
-        await buildMisc();
+        buildMisc();
 
 
     const output =
@@ -456,18 +368,18 @@ const MISC = ${JSON.stringify(
 }
 
 
-build()
-    .then(() => {
+try {
 
-        console.log(
-            "Build complete"
-        );
+    build();
 
-    })
-    .catch(err => {
+    console.log(
+        "Build complete"
+    );
 
-        console.error(err);
+} catch(error) {
 
-        process.exit(1);
+    console.error(error);
 
-    });
+    process.exit(1);
+
+}
