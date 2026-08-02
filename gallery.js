@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement("img");
 
         img.src =
-            `assets/${person.folder}/${folderName}/${file.name}`;
+            `assets/optimized/${person.folder}/${folderName}/${file.name}`;
 
         img.alt = `${person.name} ${folderName}`;
         img.loading = "lazy";

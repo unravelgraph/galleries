@@ -48,15 +48,35 @@ function getGitDate(filePath) {
 
 function convertToWebp(input, output) {
 
+    const inputDate = getGitDate(input);
+
+    // Skip if already converted and source hasn't changed
+    if (fs.existsSync(output)) {
+
+        const outputDate = getGitDate(output);
+
+        if (
+            inputDate &&
+            outputDate &&
+            new Date(outputDate) >= new Date(inputDate)
+        ) {
+            console.log("Skipping:", output);
+            return;
+        }
+
+    }
+
+
+    console.log("Converting:");
     console.log("INPUT:", input);
     console.log("OUTPUT:", output);
 
+
     ensureFolder(path.dirname(output));
+
 
     const isGif =
         path.extname(input).toLowerCase() === ".gif";
-
-    console.log("IS GIF:", isGif);
 
 
     if (isGif) {
@@ -81,6 +101,11 @@ function convertToWebp(input, output) {
 
 }
 
+function cleanOptimized() {
+
+    if (!fs.existsSync(optimizedPath)) return;
+
+}
 
 // ---------- Misc ----------
 
@@ -92,11 +117,9 @@ function buildMisc() {
         return misc;
     }
 
-
     fs.readdirSync(miscPath)
         .filter(file => imageExtensions.test(file))
         .forEach(file => {
-
 
             const input =
                 path.join(
@@ -105,39 +128,17 @@ function buildMisc() {
                 );
 
 
-            const name =
-                file.replace(
-                    imageExtensions,
-                    ".webp"
-                );
-
-
-            const output =
-                path.join(
-                    optimizedPath,
-                    "misc",
-                    name
-                );
-
-
-            convertToWebp(
-                input,
-                output
-            );
-
-
             misc.push({
 
-                name,
+                name: file,
 
                 url:
-                    output.replaceAll("\\", "/"),
+                    input.replaceAll("\\", "/"),
 
                 date:
                     getGitDate(input)
 
             });
-
 
         });
 
