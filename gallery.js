@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.createElement("img");
 
 
-        // IMPORTANT:
         // Uses optimized WebP URL
         // Handles spaces automatically
         img.src = encodeURI(file.url);
