@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const params = new URLSearchParams(window.location.search);
 
-    const personId = params.get("id");
+    const personId = params.get("person");
     const folderName = params.get("folder");
 
 
