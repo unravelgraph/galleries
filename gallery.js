@@ -61,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const container =
         document.querySelector("#gallery-images");
 
+    container.classList.add(folderName);
+
 
     if (!container) {
         return;
