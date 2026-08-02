@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navbar.innerHTML = `
 
+        <span>
             <a href="index.html">
                 galleries
             </a>
@@ -48,6 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 - ${folderName}
                 (${files.length})
             </a>
+        </span>
+        <a href="misc.html" class="misc-link">fourre-tout</a>
 
         `;
 
