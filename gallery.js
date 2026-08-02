@@ -53,27 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-
-    // ---------- Title ----------
-
-    const title =
-        document.querySelector(".gallery-title");
-
-
-    if (title) {
-
-        title.textContent =
-            `${person.name || person.folder} - ${folderName}`;
-
-    }
-
-
-
     // ---------- Gallery ----------
 
     const container =
-        document.querySelector("#gallery");
+        document.querySelector("#gallery-images");
 
 
     if (!container) {
