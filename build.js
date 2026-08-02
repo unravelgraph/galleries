@@ -24,6 +24,17 @@ function ensureFolder(folder) {
 }
 
 
+function encodePath(filePath) {
+
+    return filePath
+        .replaceAll("\\", "/")
+        .split("/")
+        .map(part => encodeURIComponent(part))
+        .join("/");
+
+}
+
+
 function getGitDate(filePath) {
 
     try {
@@ -48,31 +59,33 @@ function getGitDate(filePath) {
 
 function convertToWebp(input, output) {
 
-    const inputDate = getGitDate(input);
-
-    // Skip if already converted and source hasn't changed
     if (fs.existsSync(output)) {
 
-        const outputDate = getGitDate(output);
+        const inputTime =
+            fs.statSync(input).mtime;
 
-        if (
-            inputDate &&
-            outputDate &&
-            new Date(outputDate) >= new Date(inputDate)
-        ) {
+        const outputTime =
+            fs.statSync(output).mtime;
+
+
+        if (outputTime >= inputTime) {
+
             console.log("Skipping:", output);
             return;
+
         }
 
     }
 
 
     console.log("Converting:");
-    console.log("INPUT:", input);
-    console.log("OUTPUT:", output);
+    console.log(input);
+    console.log("→", output);
 
 
-    ensureFolder(path.dirname(output));
+    ensureFolder(
+        path.dirname(output)
+    );
 
 
     const isGif =
@@ -91,7 +104,7 @@ function convertToWebp(input, output) {
     } else {
 
         execSync(
-            `ffmpeg -y -i "${input}" -c:v libwebp -lossless 0 -q:v 75 "${output}"`,
+            `ffmpeg -y -i "${input}" -vcodec libwebp -lossless 0 -q:v 75 "${output}"`,
             {
                 stdio: "inherit"
             }
@@ -101,25 +114,24 @@ function convertToWebp(input, output) {
 
 }
 
-function cleanOptimized() {
-
-    if (!fs.existsSync(optimizedPath)) return;
-
-}
 
 // ---------- Misc ----------
+// Keeps original files
 
 function buildMisc() {
 
     const misc = [];
 
+
     if (!fs.existsSync(miscPath)) {
         return misc;
     }
 
+
     fs.readdirSync(miscPath)
         .filter(file => imageExtensions.test(file))
         .forEach(file => {
+
 
             const input =
                 path.join(
@@ -133,12 +145,13 @@ function buildMisc() {
                 name: file,
 
                 url:
-                    input.replaceAll("\\", "/"),
+                    encodePath(input),
 
                 date:
                     getGitDate(input)
 
             });
+
 
         });
 
@@ -178,6 +191,7 @@ function buildPeople() {
         }
 
 
+
         const person = {
 
             id:
@@ -190,6 +204,7 @@ function buildPeople() {
             folders: {}
 
         };
+
 
 
         const jsonPath =
@@ -214,7 +229,9 @@ function buildPeople() {
         }
 
 
+
         let latestDate = null;
+
 
 
         fs.readdirSync(personPath)
@@ -235,12 +252,15 @@ function buildPeople() {
             }
 
 
+
             const files = [];
+
 
 
             fs.readdirSync(subfolderPath)
             .filter(file => imageExtensions.test(file))
             .forEach(file => {
+
 
 
                 const input =
@@ -250,11 +270,13 @@ function buildPeople() {
                     );
 
 
+
                 const name =
                     file.replace(
                         imageExtensions,
                         ".webp"
                     );
+
 
 
                 const output =
@@ -266,14 +288,17 @@ function buildPeople() {
                     );
 
 
+
                 convertToWebp(
                     input,
                     output
                 );
 
 
+
                 const date =
                     getGitDate(input);
+
 
 
                 if (
@@ -290,36 +315,44 @@ function buildPeople() {
                 }
 
 
+
                 files.push({
 
                     name,
 
                     url:
-                        output.replaceAll("\\", "/"),
+                        encodePath(output),
 
                     date
 
                 });
 
 
+
             });
+
 
 
             person.folders[subfolder] =
                 files;
 
 
+
         });
+
 
 
         person.lastAdded =
             latestDate;
 
 
+
         people.push(person);
 
 
+
     });
+
 
 
     return people;
@@ -331,15 +364,20 @@ function buildPeople() {
 
 function build() {
 
-    console.log("Building gallery...");
+
+    console.log(
+        "Building gallery..."
+    );
 
 
     const people =
         buildPeople();
 
 
+
     const misc =
         buildMisc();
+
 
 
     const output =
@@ -356,17 +394,21 @@ const MISC = ${JSON.stringify(
 )};`;
 
 
+
     fs.writeFileSync(
         outputPath,
         output
     );
 
 
+
     console.log(
         "Generated data.js"
     );
 
+
 }
+
 
 
 try {
@@ -376,6 +418,7 @@ try {
     console.log(
         "Build complete"
     );
+
 
 } catch(error) {
 

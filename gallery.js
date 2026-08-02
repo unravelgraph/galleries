@@ -2,56 +2,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const params = new URLSearchParams(window.location.search);
 
-
-    const personId = params.get("person");
+    const personId = params.get("id");
     const folderName = params.get("folder");
 
 
-    const person = PEOPLE.find(
-        p => p.id === personId
-    );
+    const person =
+        PEOPLE.find(
+            p => p.id === personId
+        );
 
 
     if (!person) {
-        console.error("Person not found");
+        console.error("Person not found:", personId);
         return;
     }
 
 
-    const files = person.folders[folderName]
-    .sort((a, b) =>
-        new Date(b.date) - new Date(a.date)
-    );
+    const files =
+        person.folders[folderName];
 
 
     if (!files) {
-        console.error("Folder not found");
+        console.error("Folder not found:", folderName);
         return;
     }
 
 
-    const navbar = document.querySelector(".navbar");
-    navbar.innerHTML = `
-        <span><a href="index.html">Galleries</a>
-        <a href="#">${person.name} - ${folderName} (${files.length})</a></span><a href="misc.html" class="misc-link">fourre-tout</a>
-    `;
 
-    const container = document.querySelector("#gallery-images");
-    container.className = `${folderName}`;
+    // ---------- Navbar ----------
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    if (navbar) {
+
+        navbar.innerHTML = `
+
+            <a href="index.html">
+                galleries
+            </a>
+
+            <a href="#">
+                ${person.name || person.folder}
+                - ${folderName}
+                (${files.length})
+            </a>
+
+        `;
+
+    }
+
+
+
+    // ---------- Title ----------
+
+    const title =
+        document.querySelector(".gallery-title");
+
+
+    if (title) {
+
+        title.textContent =
+            `${person.name || person.folder} - ${folderName}`;
+
+    }
+
+
+
+    // ---------- Gallery ----------
+
+    const container =
+        document.querySelector("#gallery");
+
+
+    if (!container) {
+        return;
+    }
+
 
     files.forEach(file => {
 
-        const img = document.createElement("img");
 
-        img.src =
-            `assets/optimized/${person.folder}/${folderName}/${file.name}`;
+        const img =
+            document.createElement("img");
 
-        img.alt = `${person.name} ${folderName}`;
-        img.loading = "lazy";
+
+        // IMPORTANT:
+        // Uses optimized WebP URL
+        // Handles spaces automatically
+        img.src = encodeURI(file.url);
+
+
+        img.alt =
+            `${person.name || person.folder} ${folderName}`;
+
+
+        img.loading =
+            "lazy";
+
 
         container.appendChild(img);
 
+
     });
+
 
 
 });
