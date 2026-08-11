@@ -747,6 +747,10 @@ const PEOPLE = [
             ],
             "gifs": [
                 {
+                    "name": "keyu1.gif",
+                    "date": "2026-08-10"
+                },
+                {
                     "name": "keyu2.gif",
                     "date": "2026-07-28"
                 },
@@ -769,7 +773,7 @@ const PEOPLE = [
         "ethnicity": [
             "Chinese"
         ],
-        "lastAdded": "2026-08-01"
+        "lastAdded": "2026-08-10"
     },
     {
         "id": "fan-zhixin",
