@@ -867,6 +867,74 @@ const PEOPLE = [
         "lastAdded": "2026-07-29"
     },
     {
+        "id": "zhou-keyu",
+        "folder": "zhou keyu",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "keyu7.gif",
+                    "date": "2026-08-01"
+                },
+                {
+                    "name": "keyu8.gif",
+                    "date": "2026-08-01"
+                },
+                {
+                    "name": "keyu9.gif",
+                    "date": "2026-08-01"
+                },
+                {
+                    "name": "keyu2.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "keyu3.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "keyu4.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "keyu5.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "keyu6.gif",
+                    "date": "2026-07-29"
+                },
+                {
+                    "name": "keyu1.gif",
+                    "date": "2026-07-28"
+                }
+            ],
+            "gifs": [
+                {
+                    "name": "keyu2.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu3.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu4.gif",
+                    "date": "2026-07-28"
+                },
+                {
+                    "name": "keyu5.gif",
+                    "date": "2026-07-28"
+                }
+            ]
+        },
+        "name": "Daniel Zhou Keyu",
+        "dob": "2002",
+        "ethnicity": [
+            "Chinese"
+        ],
+        "lastAdded": "2026-08-01"
+    },
+    {
         "id": "fan-zhixin",
         "folder": "fan zhixin",
         "folders": {
