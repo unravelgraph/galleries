@@ -321,7 +321,7 @@ function buildPeople() {
                     name,
 
                     url:
-                        encodePath(output),
+                        output.replaceAll("\\", "/"),
 
                     date
 

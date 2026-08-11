@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Uses optimized WebP URL
         // Handles spaces automatically
-        img.src = encodeURI(file.url);
+        img.src = file.url;
 
 
         img.alt =
