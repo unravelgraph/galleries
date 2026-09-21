@@ -2089,6 +2089,11 @@ const PEOPLE = [
         "folders": {
             "avatars": [
                 {
+                    "name": "tianxiwei1.webp",
+                    "url": "optimized/tian xiwei/avatars/tianxiwei1.webp",
+                    "date": ""
+                },
+                {
                     "name": "tianxiwei2.webp",
                     "url": "optimized/tian xiwei/avatars/tianxiwei2.webp",
                     "date": ""
@@ -2097,14 +2102,15 @@ const PEOPLE = [
                     "name": "tianxiwei3.webp",
                     "url": "optimized/tian xiwei/avatars/tianxiwei3.webp",
                     "date": ""
-                },
-                {
-                    "name": "xiwei1.webp",
-                    "url": "optimized/tian xiwei/avatars/xiwei1.webp",
-                    "date": ""
                 }
-            ]
+            ],
+            "gifs": []
         },
+        "name": "tian xiwei",
+        "dob": "1997",
+        "ethnicity": [
+            "chinese"
+        ],
         "lastAdded": null
     },
     {
