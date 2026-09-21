@@ -1986,6 +1986,11 @@ const PEOPLE = [
                     "name": "yujie3.webp",
                     "url": "optimized/shen yujie/avatars/yujie3.webp",
                     "date": "2026-08-10"
+                },
+                {
+                    "name": "yujie4.webp",
+                    "url": "optimized/shen yujie/avatars/yujie4.webp",
+                    "date": ""
                 }
             ],
             "gifs": [
@@ -2106,10 +2111,10 @@ const PEOPLE = [
             ],
             "gifs": []
         },
-        "name": "tian xiwei",
+        "name": "Tian Xiwei",
         "dob": "1997",
         "ethnicity": [
-            "chinese"
+            "Chinese"
         ],
         "lastAdded": null
     },
@@ -3035,6 +3040,11 @@ const PEOPLE = [
                     "name": "keyu1.webp",
                     "url": "optimized/zhou keyu/avatars/keyu1.webp",
                     "date": "2026-08-10"
+                },
+                {
+                    "name": "keyu10.webp",
+                    "url": "optimized/zhou keyu/avatars/keyu10.webp",
+                    "date": ""
                 },
                 {
                     "name": "keyu2.webp",
