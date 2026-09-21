@@ -2084,6 +2084,30 @@ const PEOPLE = [
         "lastAdded": "2026-08-10"
     },
     {
+        "id": "tian-xiwei",
+        "folder": "tian xiwei",
+        "folders": {
+            "avatars": [
+                {
+                    "name": "tianxiwei2.webp",
+                    "url": "optimized/tian xiwei/avatars/tianxiwei2.webp",
+                    "date": ""
+                },
+                {
+                    "name": "tianxiwei3.webp",
+                    "url": "optimized/tian xiwei/avatars/tianxiwei3.webp",
+                    "date": ""
+                },
+                {
+                    "name": "xiwei1.webp",
+                    "url": "optimized/tian xiwei/avatars/xiwei1.webp",
+                    "date": ""
+                }
+            ]
+        },
+        "lastAdded": null
+    },
+    {
         "id": "wang-anyu",
         "folder": "wang anyu",
         "folders": {
